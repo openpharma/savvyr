@@ -1,51 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/404.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/404.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/CODE_OF_CONDUCT.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/CONTRIBUTING.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/articles/hello.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/LICENSE-text.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/PULL_REQUEST_TEMPLATE.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/authors.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/SECURITY.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/index.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/articles/hello.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/news/index.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/articles/index.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/reference/hello.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/authors.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/index.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/reference/plumber_api.html</loc>
   </url>
   <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/reference/hello.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/reference/plumber_api.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/reference/shiny_app.html</loc>
-  </url>
-  <url>
-    <loc>https://insightsengineering.github.io/r.pkg.template/main/workflows.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/reference/shiny_app.html</loc>
   </url>
 </urlset>
