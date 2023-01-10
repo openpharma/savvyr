@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage line-rate="0.7" branch-rate="0" lines-covered="14" lines-valid="20" branches-covered="0" branches-valid="0" complexity="0" version="3.6.1" timestamp="2023-01-09 20:26:42">
+<coverage line-rate="0.7" branch-rate="0" lines-covered="14" lines-valid="20" branches-covered="0" branches-valid="0" complexity="0" version="3.6.1" timestamp="2023-01-10 11:05:36">
   <sources/>
   <packages>
-    <package name="r.pkg.template" line-rate="0.7" branch-rate="0" complexity="0">
+    <package name="savvyr" line-rate="0.7" branch-rate="0" complexity="0">
       <classes>
         <class name="hello.R" filename="R/hello.R" line-rate="0.7" branch-rate="0" complexity="0">
           <methods>
