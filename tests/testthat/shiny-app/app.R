@@ -1,1 +1,1 @@
-r.pkg.template::shiny_app()
+savvyr::shiny_app()

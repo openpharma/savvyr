@@ -7,6 +7,6 @@ date: "`r Sys.Date()`"
 Hello World!
 
 ```{r}
-library(r.pkg.template)
-hello("r.pkg.template!")
+library(savvyr)
+hello("savvyr!")
 ```
