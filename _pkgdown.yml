@@ -18,3 +18,7 @@ navbar:
   right:
     - icon: fa-github
       href: https://github.com/openpharma/savvyr
+  reference:
+  - title: Function
+    contents:
+      - generate_data
