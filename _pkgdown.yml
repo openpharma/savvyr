@@ -22,3 +22,4 @@ navbar:
   - title: Function
     contents:
       - generate_data
+      - inc_prop
