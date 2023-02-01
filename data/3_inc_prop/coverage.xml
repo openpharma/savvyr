@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage line-rate="0.888888888888889" branch-rate="0" lines-covered="48" lines-valid="54" branches-covered="0" branches-valid="0" complexity="0" version="3.6.1" timestamp="2023-02-01 12:40:01">
+<coverage line-rate="0.894736842105263" branch-rate="0" lines-covered="51" lines-valid="57" branches-covered="0" branches-valid="0" complexity="0" version="3.6.1" timestamp="2023-02-01 12:52:45">
   <sources/>
   <packages>
-    <package name="savvyr" line-rate="0.888888888888889" branch-rate="0" complexity="0">
+    <package name="savvyr" line-rate="0.894736842105263" branch-rate="0" complexity="0">
       <classes>
         <class name="generate_data.R" filename="R/generate_data.R" line-rate="1" branch-rate="0" complexity="0">
           <methods>
@@ -133,10 +133,13 @@
                 <line number="23" hits="1" branch="false"/>
                 <line number="24" hits="1" branch="false"/>
                 <line number="25" hits="1" branch="false"/>
+                <line number="26" hits="1" branch="false"/>
                 <line number="27" hits="1" branch="false"/>
                 <line number="28" hits="1" branch="false"/>
-                <line number="29" hits="1" branch="false"/>
+                <line number="30" hits="1" branch="false"/>
+                <line number="31" hits="1" branch="false"/>
                 <line number="32" hits="1" branch="false"/>
+                <line number="35" hits="1" branch="false"/>
               </lines>
             </method>
           </methods>
@@ -144,10 +147,13 @@
             <line number="23" hits="1" branch="false"/>
             <line number="24" hits="1" branch="false"/>
             <line number="25" hits="1" branch="false"/>
+            <line number="26" hits="1" branch="false"/>
             <line number="27" hits="1" branch="false"/>
             <line number="28" hits="1" branch="false"/>
-            <line number="29" hits="1" branch="false"/>
+            <line number="30" hits="1" branch="false"/>
+            <line number="31" hits="1" branch="false"/>
             <line number="32" hits="1" branch="false"/>
+            <line number="35" hits="1" branch="false"/>
           </lines>
         </class>
       </classes>
