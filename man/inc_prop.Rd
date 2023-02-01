@@ -2,7 +2,7 @@
 % Please edit documentation in R/inc_prop.R
 \name{inc_prop}
 \alias{inc_prop}
-\title{Compute incidence proportion}
+\title{Computing the Incidence Proportion}
 \usage{
 inc_prop(data, tau)
 }
@@ -23,7 +23,7 @@ A \code{vector} with the following entries:
 }
 }
 \description{
-Compute incidence proportion
+Computing the Incidence Proportion
 }
 \examples{
 set.seed(123)
