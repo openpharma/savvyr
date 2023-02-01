@@ -2,6 +2,7 @@
 
 export(generate_data)
 export(hello)
+export(inc_prop)
 export(plumber_api)
 export(shiny_app)
 import(checkmate)
