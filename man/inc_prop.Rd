@@ -7,13 +7,13 @@
 inc_prop(data, tau)
 }
 \arguments{
-\item{data}{(\code{data.frame}) with columns with
+\item{data}{(\code{data.frame})\cr with columns including
 \itemize{
 \item \code{time_to_event}: Time to the first AE, death or soft competing event.
 \item \code{type_of_event}: 0 for censored, 1 for AE, 2 for death, 3 for soft competing event.
 }}
 
-\item{tau}{(\code{numeric}) \cr Milestone at which incidence proportion is computed}
+\item{tau}{(\code{numeric})\cr milestone at which incidence proportion is computed.}
 }
 \value{
 A \code{vector} with the following entries:
