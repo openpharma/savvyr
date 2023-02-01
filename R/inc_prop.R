@@ -18,8 +18,8 @@
 #' dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
 #' inc_prop(dat, tau = 4)
 #'
-inc_prop <- function(data, tau){
-
+inc_prop <- function(data,
+                     tau) {
   assertDataFrame(data, types = rep("numeric", 5), any.missing = FALSE, all.missing = FALSE, min.rows = 1, ncols = 4)
   assert_numeric(data$time_to_event, lower = 0, finite = TRUE)
   assert_integerish(data$type_of_event, any.missing = FALSE)
