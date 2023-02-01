@@ -1,4 +1,4 @@
-#' Compute incidence proportion
+#' Computing the Incidence Proportion
 #'
 #' @param data (`data.frame`) with columns with
 #'  - `time_to_event`: Time to the first AE, death or soft competing event.
