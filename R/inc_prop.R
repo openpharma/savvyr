@@ -1,10 +1,10 @@
 #' Computing the Incidence Proportion
 #'
-#' @param data (`data.frame`) with columns with
+#' @param data (`data.frame`)\cr with columns including
 #'  - `time_to_event`: Time to the first AE, death or soft competing event.
 #'  - `type_of_event`: 0 for censored, 1 for AE, 2 for death, 3 for soft competing event.
 #'
-#' @param tau (`numeric`) \cr Milestone at which incidence proportion is computed
+#' @param tau (`numeric`)\cr milestone at which incidence proportion is computed.
 #'
 #' @return A `vector` with the following entries:
 #'
@@ -20,7 +20,7 @@
 #'
 inc_prop <- function(data,
                      tau) {
-  assertDataFrame(data, types = rep("numeric", 5), any.missing = FALSE, all.missing = FALSE, min.rows = 1, ncols = 4)
+  assert_data_frame(data, any.missing = FALSE, min.rows = 1, min.cols = 2)
   assert_numeric(data$time_to_event, lower = 0, finite = TRUE)
   assert_integerish(data$type_of_event, any.missing = FALSE)
   assert_subset(data$type_of_event, c(0, 1, 2, 3))
@@ -31,6 +31,5 @@ inc_prop <- function(data,
   ae <- nrow(data["type_of_event" == 1 & "time_to_event" <= tau]) / n
   ae_prob_var <- ae * (1 - ae) / n
 
-  # result
   c("ae_prob" = ae, "ae_prob_var" = ae_prob_var)
 }
