@@ -1,3 +1,4 @@
+---
 url: https://openpharma.github.io/savvyr
 
 template:
@@ -19,7 +20,7 @@ navbar:
     - icon: fa-github
       href: https://github.com/openpharma/savvyr
   reference:
-  - title: Function
-    contents:
-      - generate_data
-      - inc_prop
+    - title: Function
+      contents:
+        - generate_data
+        - inc_prop
