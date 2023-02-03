@@ -7,7 +7,7 @@
 inc_prop(data, tau)
 }
 \arguments{
-\item{data}{(`data.frame`)\cr with columns including:
+\item{data}{(\code{data.frame})\cr with columns including:
 \itemize{
 \item \code{time_to_event}: Time to the first AE, death or soft competing
 event.
@@ -15,10 +15,10 @@ event.
 competing event.
 }}
 
-\item{tau}{(`numeric`)\cr milestone at which incidence proportion is computed.}
+\item{tau}{(\code{numeric})\cr milestone at which incidence proportion is computed.}
 }
 \value{
-(`vector`)\cr a vector with the following entries:
+(\code{vector})\cr a vector with the following entries:
 \itemize{
 \item \code{ae_prob}: Estimated probability of AE.
 \item \code{ae_prob_var}: Variance of that estimate.
