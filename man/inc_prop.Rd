@@ -7,16 +7,18 @@
 inc_prop(data, tau)
 }
 \arguments{
-\item{data}{(\code{data.frame})\cr with columns including
+\item{data}{(`data.frame`)\cr with columns including:
 \itemize{
-\item \code{time_to_event}: Time to the first AE, death or soft competing event.
-\item \code{type_of_event}: 0 for censored, 1 for AE, 2 for death, 3 for soft competing event.
+\item \code{time_to_event}: Time to the first AE, death or soft competing
+event.
+\item \code{type_of_event}: 0 for censored, 1 for AE, 2 for death, 3 for soft
+competing event.
 }}
 
-\item{tau}{(\code{numeric})\cr milestone at which incidence proportion is computed.}
+\item{tau}{(`numeric`)\cr milestone at which incidence proportion is computed.}
 }
 \value{
-A \code{vector} with the following entries:
+(`vector`)\cr a vector with the following entries:
 \itemize{
 \item \code{ae_prob}: Estimated probability of AE.
 \item \code{ae_prob_var}: Variance of that estimate.
@@ -27,7 +29,14 @@ Computing the Incidence Proportion
 }
 \examples{
 set.seed(123)
-dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
+dat <- generate_data(
+  n = 5,
+  cens = c(2, 5),
+  haz_ae = 2,
+  haz_death = 3,
+  haz_soft = 5
+)
+
 inc_prop(dat, tau = 4)
 
 }

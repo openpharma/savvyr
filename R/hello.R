@@ -2,11 +2,13 @@
 #'
 #' @description Greet a person and appropriately capitalize their name.
 #'
-#' @param name Your name (character string; e.g. "john doe").
+#' @typed name: string
+#'   a name, such as "john doe".
 #'
-#' @return A character string, capitalized to title case.
+#' @typedreturn string
+#'   capitalized to title case.
+#'
 #' @export
-#'
 #' @examples
 #' hello("james bond")
 hello <- function(name = "your name") {

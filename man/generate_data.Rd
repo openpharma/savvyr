@@ -7,22 +7,23 @@
 generate_data(n, cens, haz_ae, haz_death, haz_soft)
 }
 \arguments{
-\item{n}{(\code{count})\cr number of patients.}
+\item{n}{(`count`)\cr number of patients.}
 
-\item{cens}{(\code{numeric})\cr minimum and maximum censoring time.}
+\item{cens}{(`numeric`)\cr minimum and maximum censoring time.}
 
-\item{haz_ae}{(\code{number})\cr constant hazard for AE.}
+\item{haz_ae}{(`number`)\cr constant hazard for AE.}
 
-\item{haz_death}{(\code{number})\cr constant hazard for death.}
+\item{haz_death}{(`number`)\cr constant hazard for death.}
 
-\item{haz_soft}{(\code{number})\cr constant hazard for soft competing event.}
+\item{haz_soft}{(`number`)\cr constant hazard for soft competing event.}
 }
 \value{
-A \code{data.frame} with the following columns:
+(`data.frame`)\cr a \code{data.frame} with the following columns:
 \itemize{
 \item \code{id}: Patient ID.
 \item \code{time_to_event}: Time to the first AE, death or soft competing event.
-\item \code{type_of_event}: 0 for censored, 1 for AE, 2 for death, 3 for soft competing event.
+\item \code{type_of_event}: 0 for censored, 1 for AE, 2 for death, 3 for soft
+competing event.
 \item \code{cens}: Censoring time.
 }
 }

@@ -7,10 +7,10 @@
 hello(name = "your name")
 }
 \arguments{
-\item{name}{Your name (character string; e.g. "john doe").}
+\item{name}{(`string`)\cr a name, such as "john doe".}
 }
 \value{
-A character string, capitalized to title case.
+(`string`)\cr capitalized to title case.
 }
 \description{
 Greet a person and appropriately capitalize their name.
