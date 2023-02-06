@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="api" timestamp="2023-02-06T16:35:50Z" hostname="975df4a36d44" tests="1" skipped="0" failures="0" errors="0" time="4.301">
+    <testcase time="4.301" classname="api" name="API_greets_the_person"/>
+  </testsuite>
+  <testsuite name="generate_data" timestamp="2023-02-06T16:35:54Z" hostname="975df4a36d44" tests="4" skipped="0" failures="0" errors="0" time="0.065">
+    <testcase time="0.0510000000000002" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.000999999999999446" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.0120000000000005" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.00100000000000033" classname="generate_data" name="generate_data_works_as_expected"/>
+  </testsuite>
+  <testsuite name="hello" timestamp="2023-02-06T16:35:54Z" hostname="975df4a36d44" tests="1" skipped="0" failures="0" errors="0" time="0.091">
+    <testcase time="0.0909999999999993" classname="hello" name="hello_greets_the_entity"/>
+  </testsuite>
+  <testsuite name="inc_prop" timestamp="2023-02-06T16:35:54Z" hostname="975df4a36d44" tests="2" skipped="0" failures="0" errors="0" time="0.05">
+    <testcase time="0.0490000000000004" classname="inc_prop" name="inc_prop_works_as_expected"/>
+    <testcase time="0.00100000000000033" classname="inc_prop" name="inc_prop_works_as_expected"/>
+  </testsuite>
+  <testsuite name="shiny" timestamp="2023-02-06T16:35:54Z" hostname="975df4a36d44" tests="1" skipped="0" failures="0" errors="0" time="3.503">
+    <testcase time="3.503" classname="shiny" name="The_Shiny_App_returns_a_proper_greeting"/>
+  </testsuite>
+</testsuites>
