@@ -53,12 +53,6 @@ jobs:
     if: github.event_name == 'pull_request'
     name: Check URLs 🌐
     uses: insightsengineering/r.pkg.template/.github/workflows/links.yaml@main
-  vbump:
-    name: Version Bump 🤜🤛
-    if: github.event_name == 'push'
-    uses: insightsengineering/r.pkg.template/.github/workflows/version-bump.yaml@main
-    secrets:
-      REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   version:
     name: Version Check 🏁
     uses: insightsengineering/r.pkg.template/.github/workflows/version.yaml@main
