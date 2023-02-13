@@ -3,7 +3,7 @@ list(
   packages = c(
     "roxylint",
     "roxytypes"
-    ),
+  ),
   roclets = c(
     "namespace",
     "rd",
