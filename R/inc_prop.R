@@ -10,7 +10,7 @@
 #'   milestone at which incidence proportion is computed.
 #'
 #' @typedreturn vector
-#'   a vector with the following entries:
+#'   with the following entries:
 #'   - `ae_prob`: Estimated probability of AE.
 #'   - `ae_prob_var`: Variance of that estimate.
 #'
