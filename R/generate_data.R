@@ -5,21 +5,26 @@
 #' hazard for the competing event of death, and the hazard for the "soft" competing events.
 #' Censoring is uniform in the given range.
 #'
-#' @param n (`count`)\cr number of patients.
-#' @param cens (`numeric`)\cr minimum and maximum censoring time.
-#' @param haz_ae (`number`)\cr constant hazard for AE.
-#' @param haz_death (`number`)\cr constant hazard for death.
-#' @param haz_soft (`number`)\cr constant hazard for soft competing event.
+#' @typed n: count
+#'   number of patients.
+#' @typed cens: numeric
+#'   minimum and maximum censoring time.
+#' @typed haz_ae: number
+#'   constant hazard for AE.
+#' @typed haz_death: number
+#'   constant hazard for death.
+#' @typed haz_soft: number
+#'   constant hazard for soft competing event.
 #'
-#' @return A `data.frame` with the following columns:
-#'
-#' - `id`: Patient ID.
-#' - `time_to_event`: Time to the first AE, death or soft competing event.
-#' - `type_of_event`: 0 for censored, 1 for AE, 2 for death, 3 for soft competing event.
-#' - `cens`: Censoring time.
+#' @typedreturn data.frame
+#'   a `data.frame` with the following columns:
+#'   - `id`: Patient ID.
+#'   - `time_to_event`: Time to the first AE, death or soft competing event.
+#'   - `type_of_event`: 0 for censored, 1 for AE, 2 for death, 3 for soft
+#'     competing event.
+#'   - `cens`: Censoring time.
 #'
 #' @export
-#'
 #' @examples
 #' set.seed(123)
 #' generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
