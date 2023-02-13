@@ -25,8 +25,8 @@ Suggests:
     roxytypes,
     roxylint
 Remotes:
-    dgkf/roxytypes,
-    dgkf/roxylint,
+    openpharma/roxytypes,
+    openpharma/roxylint,
 Config/Needs/documentation:
     roxytypes,
     roxylint
