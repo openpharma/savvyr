@@ -18,7 +18,7 @@ competing event.
 \item{tau}{(\code{numeric})\cr milestone at which incidence proportion is computed.}
 }
 \value{
-(\code{vector})\cr a vector with the following entries:
+(\code{vector})\cr with the following entries:
 \itemize{
 \item \code{ae_prob}: Estimated probability of AE.
 \item \code{ae_prob_var}: Variance of that estimate.

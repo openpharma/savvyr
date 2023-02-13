@@ -48,7 +48,7 @@ shiny_app <- function() {
 #' @description Greet a person and appropriately capitalize their name
 #'              as a Plumber API.
 #'
-#' @param ... Additional arguments to plumber::pr_run()
+#' @param ... Additional arguments to plumber::pr_run().
 #'
 #' @return Plumber API showcasing the personal greeting feature.
 #' @export
