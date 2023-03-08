@@ -20,8 +20,6 @@
 #' set.seed(123)
 #' #' dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
 #' inc_prop(dat, tau = 4)
-
-
 prop_trans_inc_dens <- function(data,
                                 tau) {
   assert_data_frame(data, any.missing = FALSE, min.rows = 1, min.cols = 2)
@@ -34,13 +32,13 @@ prop_trans_inc_dens <- function(data,
   time <- data$time_to_event
   inc_dens <-
     nrow(data[type_of_event == 1 & time_to_event <= tau]) /
-    sum(ifelse(time <= tau, time, tau))
+      sum(ifelse(time <= tau, time, tau))
   ae_prob <- 1 - exp(-inc_dens * tau)
 
   var_a_var <-
     nrow(data[type_of_event == 1 & time_to_event <= tau]) /
-    sum(ifelse(time <= tau, time, tau)) ^ 2
-  ae_prob_var <- exp(-inc_dens * tau) ^ 2 * var_a_var * tau ^ 2
+      sum(ifelse(time <= tau, time, tau))^2
+  ae_prob_var <- exp(-inc_dens * tau)^2 * var_a_var * tau^2
 
 
   c("ae_prob" = ae_prob, "ae_prob_var" = ae_prob_var)
