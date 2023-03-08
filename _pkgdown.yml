@@ -13,3 +13,4 @@ navbar:
       contents:
         - generate_data
         - inc_prop
+        - prop_trans_inc_dens
