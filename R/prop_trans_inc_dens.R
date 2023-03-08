@@ -29,15 +29,11 @@ prop_trans_inc_dens <- function(data,
   assert_number(tau, finite = TRUE)
   assert_true(tau > 0)
 
-  time <- data$time_to_event
-  inc_dens <-
-    nrow(data[type_of_event == 1 & time_to_event <= tau]) /
-      sum(ifelse(time <= tau, time, tau))
+  n_ae <- nrow(data[data$type_of_event == 1 & data$time_to_event <= tau, ])
+  sum_trunc_times <- sum(ifelse(data$time_to_event <= tau, data$time_to_event, tau))
+  inc_dens <- n_ae / sum_trunc_times
   ae_prob <- 1 - exp(-inc_dens * tau)
-
-  var_a_var <-
-    nrow(data[type_of_event == 1 & time_to_event <= tau]) /
-      sum(ifelse(time <= tau, time, tau))^2
+  var_a_var <- n_ae / sum_trunc_times^2
   ae_prob_var <- exp(-inc_dens * tau)^2 * var_a_var * tau^2
 
   c("ae_prob" = ae_prob, "ae_prob_var" = ae_prob_var)
