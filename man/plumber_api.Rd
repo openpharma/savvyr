@@ -7,7 +7,7 @@
 plumber_api(...)
 }
 \arguments{
-\item{...}{Additional arguments to plumber::pr_run()}
+\item{...}{Additional arguments to plumber::pr_run().}
 }
 \value{
 Plumber API showcasing the personal greeting feature.
