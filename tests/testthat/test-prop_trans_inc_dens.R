@@ -1,4 +1,4 @@
-test_that("prop_trans_inc_prop works as expected", {
+test_that("prop_trans_inc_dens works as expected", {
   set.seed(123)
   df <- generate_data(
     n = 10,
