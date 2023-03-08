@@ -64,3 +64,4 @@ generate_data <- function(n,
   # Reorder columns.
   result[, c("id", "time_to_event", "type_of_event", "cens")]
 }
+
