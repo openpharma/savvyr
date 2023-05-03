@@ -22,7 +22,7 @@
 #' @examples
 #' set.seed(123)
 #' dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
-#' prop_trans_inc_dens_ce(dat, ce=2, tau = 4)
+#' prop_trans_inc_dens_ce(dat, ce = 2, tau = 4)
 #'
 prop_trans_inc_dens_ce <- function(data,
                                    ce,
@@ -37,24 +37,23 @@ prop_trans_inc_dens_ce <- function(data,
 
 
   data$type_of_event2 <- ifelse(ce == 2 & data$type_of_event == 3, 0,
-                                ifelse(ce == 3 & data$type_of_event == 3, 2, data$type_of_event))
+    ifelse(ce == 3 & data$type_of_event == 3, 2, data$type_of_event)
+  )
 
   time2 <- ifelse(data$time_to_event <= tau, data$time_to_event, tau)
   s2 <- sum(time2)
 
-  id <- nrow(data[data$type_of_event2 == 1 & data$time_to_event <= tau,])/ s2
+  id <- nrow(data[data$type_of_event2 == 1 & data$time_to_event <= tau, ]) / s2
 
-  id_ce <- nrow(data[data$type_of_event2 == 2 & data$time_to_event <= tau,])/ s2
+  id_ce <- nrow(data[data$type_of_event2 == 2 & data$time_to_event <= tau, ]) / s2
 
   tmp <- id + id_ce
   ett <- exp(-tau * tmp)
 
-  ae_prob <- id / tmp * (1 - exp(- tau*tmp))
-  ae_prob_var <- (((ett *      (id_ce * (1 / ett - 1) + tau * id * tmp)) / tmp ^ 2) ^ 2 * id / s2 +
-                    ((ett * id * (tau * tmp - 1 / ett + 1)) / tmp ^ 2) ^ 2 * id_ce / s2)
+  ae_prob <- id / tmp * (1 - exp(-tau * tmp))
+  ae_prob_var <- (((ett * (id_ce * (1 / ett - 1) + tau * id * tmp)) / tmp^2)^2 * id / s2 +
+    ((ett * id * (tau * tmp - 1 / ett + 1)) / tmp^2)^2 * id_ce / s2)
 
 
   c("ae_prob" = ae_prob, "ae_prob_var" = ae_prob_var)
 }
-
-
