@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="api" timestamp="2023-04-27T07:31:26Z" hostname="fbfd598f214b" tests="1" skipped="0" failures="0" errors="0" time="4.546">
-    <testcase time="4.546" classname="api" name="API_greets_the_person"/>
+  <testsuite name="api" timestamp="2023-05-03T13:00:43Z" hostname="98a581fbc255" tests="1" skipped="0" failures="0" errors="0" time="4.003">
+    <testcase time="4.003" classname="api" name="API_greets_the_person"/>
   </testsuite>
-  <testsuite name="generate_data" timestamp="2023-04-27T07:31:30Z" hostname="fbfd598f214b" tests="4" skipped="0" failures="0" errors="0" time="0.079">
-    <testcase time="0.0600000000000005" classname="generate_data" name="generate_data_works_as_expected"/>
-    <testcase time="0.00199999999999978" classname="generate_data" name="generate_data_works_as_expected"/>
-    <testcase time="0.0149999999999997" classname="generate_data" name="generate_data_works_as_expected"/>
-    <testcase time="0.00200000000000067" classname="generate_data" name="generate_data_works_as_expected"/>
+  <testsuite name="generate_data" timestamp="2023-05-03T13:00:47Z" hostname="98a581fbc255" tests="4" skipped="0" failures="0" errors="0" time="0.049">
+    <testcase time="0.0369999999999999" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.00100000000000033" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.00999999999999979" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.00100000000000033" classname="generate_data" name="generate_data_works_as_expected"/>
   </testsuite>
-  <testsuite name="hello" timestamp="2023-04-27T07:31:30Z" hostname="fbfd598f214b" tests="1" skipped="0" failures="0" errors="0" time="0.107">
-    <testcase time="0.106999999999999" classname="hello" name="hello_greets_the_entity"/>
+  <testsuite name="hello" timestamp="2023-05-03T13:00:48Z" hostname="98a581fbc255" tests="1" skipped="0" failures="0" errors="0" time="0.064">
+    <testcase time="0.0640000000000001" classname="hello" name="hello_greets_the_entity"/>
   </testsuite>
-  <testsuite name="inc_prop" timestamp="2023-04-27T07:31:30Z" hostname="fbfd598f214b" tests="2" skipped="0" failures="0" errors="0" time="0.061">
-    <testcase time="0.0590000000000002" classname="inc_prop" name="inc_prop_works_as_expected"/>
-    <testcase time="0.00199999999999978" classname="inc_prop" name="inc_prop_works_as_expected"/>
+  <testsuite name="inc_prop" timestamp="2023-05-03T13:00:48Z" hostname="98a581fbc255" tests="2" skipped="0" failures="0" errors="0" time="0.038">
+    <testcase time="0.0369999999999999" classname="inc_prop" name="inc_prop_works_as_expected"/>
+    <testcase time="0.000999999999999446" classname="inc_prop" name="inc_prop_works_as_expected"/>
   </testsuite>
-  <testsuite name="prop_trans_inc_dens" timestamp="2023-04-27T07:31:30Z" hostname="fbfd598f214b" tests="1" skipped="0" failures="0" errors="0" time="0.01">
-    <testcase time="0.0100000000000007" classname="prop_trans_inc_dens" name="prop_trans_inc_dens_works_as_expected"/>
+  <testsuite name="prop_trans_inc_dens" timestamp="2023-05-03T13:00:48Z" hostname="98a581fbc255" tests="1" skipped="0" failures="0" errors="0" time="0.008">
+    <testcase time="0.00800000000000001" classname="prop_trans_inc_dens" name="prop_trans_inc_dens_works_as_expected"/>
   </testsuite>
-  <testsuite name="prop_trans_inc_dens_ce" timestamp="2023-04-27T07:31:30Z" hostname="fbfd598f214b" tests="1" skipped="0" failures="0" errors="0" time="0.009">
-    <testcase time="0.00899999999999945" classname="prop_trans_inc_dens_ce" name="prop_trans_inc_dens_ce_works_as_expected"/>
+  <testsuite name="prop_trans_inc_dens_ce" timestamp="2023-05-03T13:00:48Z" hostname="98a581fbc255" tests="1" skipped="0" failures="0" errors="0" time="0.006">
+    <testcase time="0.00600000000000023" classname="prop_trans_inc_dens_ce" name="prop_trans_inc_dens_ce_works_as_expected"/>
   </testsuite>
-  <testsuite name="shiny" timestamp="2023-04-27T07:31:30Z" hostname="fbfd598f214b" tests="1" skipped="0" failures="0" errors="0" time="4.339">
-    <testcase time="4.339" classname="shiny" name="The_Shiny_App_returns_a_proper_greeting"/>
+  <testsuite name="shiny" timestamp="2023-05-03T13:00:48Z" hostname="98a581fbc255" tests="1" skipped="0" failures="0" errors="0" time="3.473">
+    <testcase time="3.473" classname="shiny" name="The_Shiny_App_returns_a_proper_greeting"/>
   </testsuite>
 </testsuites>
