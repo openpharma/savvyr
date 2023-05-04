@@ -23,7 +23,6 @@
 #' set.seed(123)
 #' dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
 #' prop_trans_inc_dens_ce(dat, ce = 2, tau = 4)
-#'
 prop_trans_inc_dens_ce <- function(data,
                                    ce,
                                    tau) {
