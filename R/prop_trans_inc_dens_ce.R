@@ -1,4 +1,4 @@
-#' Computing the Probability Transform Incidence Density accounting for competing events
+#' Probability Transform Incidence Density Accounting for Competing Events
 #'
 #' @typed data: data.frame
 #'  with columns including
