@@ -1,5 +1,3 @@
-## adapt, this is code from inc-dens
-
 test_that("prop_trans_inc_dens_ce works as expected", {
   set.seed(23)
   df <- generate_data(
