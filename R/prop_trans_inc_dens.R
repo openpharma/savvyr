@@ -20,7 +20,6 @@
 #' set.seed(123)
 #' dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
 #' prop_trans_inc_dens(dat, tau = 4)
-
 prop_trans_inc_dens <- function(data,
                                 tau) {
   assert_data_frame(data, any.missing = FALSE, min.rows = 1, min.cols = 2)
