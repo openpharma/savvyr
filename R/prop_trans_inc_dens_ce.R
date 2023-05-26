@@ -32,7 +32,6 @@
 #' set.seed(123)
 #' dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
 #' prop_trans_inc_dens_ce(dat, ce = 2, tau = 4)
-
 prop_trans_inc_dens_ce <- function(data,
                                    ce,
                                    tau) {
@@ -59,12 +58,12 @@ prop_trans_inc_dens_ce <- function(data,
   sum_incidence_densities <- incidence_density + incidence_density_ce
   expected_time_to_event <- exp(-tau * sum_incidence_densities)
 
-  ae_prob <- incidence_density / sum_incidence_densities * (1 -  expected_time_to_event)
+  ae_prob <- incidence_density / sum_incidence_densities * (1 - expected_time_to_event)
 
-  var1 <- ( (expected_time_to_event * (incidence_density_ce * (1 / expected_time_to_event - 1) + tau * incidence_density * sum_incidence_densities)) / sum_incidence_densities^2)^2 * incidence_density    / patient_time
-  var2 <- ( (expected_time_to_event *  incidence_density * (tau * sum_incidence_densities - 1 / expected_time_to_event + 1))                         / sum_incidence_densities^2)^2 * incidence_density_ce / patient_time
+  var1 <- ((expected_time_to_event * (incidence_density_ce * (1 / expected_time_to_event - 1) + tau * incidence_density * sum_incidence_densities)) / sum_incidence_densities^2)^2 * incidence_density / patient_time
+  var2 <- ((expected_time_to_event * incidence_density * (tau * sum_incidence_densities - 1 / expected_time_to_event + 1)) / sum_incidence_densities^2)^2 * incidence_density_ce / patient_time
 
-  ae_prob_var <- var1 +var2
+  ae_prob_var <- var1 + var2
 
   c("ae_prob" = ae_prob, "ae_prob_var" = ae_prob_var)
 }
