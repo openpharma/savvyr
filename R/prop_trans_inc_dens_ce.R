@@ -49,8 +49,8 @@ prop_trans_inc_dens_ce <- function(data,
     ifelse(ce == 3 & data$type_of_event == 3, 2, data$type_of_event)
   )
 
-  time2 <- ifelse(data$time_to_event <= tau, data$time_to_event, tau)
-  patient_time <- sum(time2)
+  time_max_tau <- ifelse(data$time_to_event <= tau, data$time_to_event, tau)
+  patient_time <- sum(time_max_tau)
 
   incidence_density <- nrow(data[data$type_of_event2 == 1 & data$time_to_event <= tau, ]) / patient_time
 
