@@ -25,7 +25,15 @@ prop_trans_inc_dens_ce(data, ce, tau)
 }
 }
 \description{
-Probability Transform Incidence Density Accounting for Competing Events
+This funciton calculates the incidence density of both adverse events and specified competing events
+observed in \link{0, tau} and then combines and transforms the incidence densities on a probability scale.
+Please also refer to formula (4) and (5) in
+}
+\details{
+Stegherr, R., Schmoor, C., Beyersmann, J. et al.
+Survival analysis for AdVerse events with VarYing follow-up times (SAVVY)—
+estimation of adverse event risks. Trials 22, 420 (2021).
+https://doi.org/10.1186/s13063-021-05354-x
 }
 \examples{
 set.seed(123)
