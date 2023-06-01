@@ -44,16 +44,16 @@ prop_trans_inc_dens_ce <- function(data,
   assert_subset(ce, c(2, 3))
 
 
-  data$type_of_event_accounted<- ifelse(ce == 2 & data$type_of_event == 3, 0,
+  data$type_of_event_accounted <- ifelse(ce == 2 & data$type_of_event == 3, 0,
     ifelse(ce == 3 & data$type_of_event == 3, 2, data$type_of_event)
   )
 
   time_max_tau <- ifelse(data$time_to_event <= tau, data$time_to_event, tau)
   patient_time <- sum(time_max_tau)
 
-  incidence_density <- nrow(data[data$type_of_event_accounted== 1 & data$time_to_event <= tau, ]) / patient_time
+  incidence_density <- nrow(data[data$type_of_event_accounted == 1 & data$time_to_event <= tau, ]) / patient_time
 
-  incidence_density_ce <- nrow(data[data$type_of_event_accounted== 2 & data$time_to_event <= tau, ]) / patient_time
+  incidence_density_ce <- nrow(data[data$type_of_event_accounted == 2 & data$time_to_event <= tau, ]) / patient_time
 
   sum_incidence_densities <- incidence_density + incidence_density_ce
   expected_time_to_event <- exp(-tau * sum_incidence_densities)
