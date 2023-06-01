@@ -28,5 +28,5 @@ Computing the Probability Transform Incidence Density
 \examples{
 set.seed(123)
 dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
-inc_prop(dat, tau = 4)
+prop_trans_inc_dens(dat, tau = 4)
 }
