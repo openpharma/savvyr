@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="api" timestamp="2023-06-01T08:02:38Z" hostname="05e813b05570" tests="1" skipped="0" failures="0" errors="0" time="3.975">
-    <testcase time="3.975" classname="api" name="API_greets_the_person"/>
+  <testsuite name="api" timestamp="2023-06-01T08:08:24Z" hostname="4e023d13bc1b" tests="1" skipped="0" failures="0" errors="0" time="4.312">
+    <testcase time="4.312" classname="api" name="API_greets_the_person"/>
   </testsuite>
-  <testsuite name="generate_data" timestamp="2023-06-01T08:02:42Z" hostname="05e813b05570" tests="4" skipped="0" failures="0" errors="0" time="0.049">
-    <testcase time="0.0369999999999999" classname="generate_data" name="generate_data_works_as_expected"/>
+  <testsuite name="generate_data" timestamp="2023-06-01T08:08:29Z" hostname="4e023d13bc1b" tests="4" skipped="0" failures="0" errors="0" time="0.082">
+    <testcase time="0.0649999999999995" classname="generate_data" name="generate_data_works_as_expected"/>
     <testcase time="0.00100000000000033" classname="generate_data" name="generate_data_works_as_expected"/>
-    <testcase time="0.00999999999999979" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.0149999999999997" classname="generate_data" name="generate_data_works_as_expected"/>
     <testcase time="0.00100000000000033" classname="generate_data" name="generate_data_works_as_expected"/>
   </testsuite>
-  <testsuite name="hello" timestamp="2023-06-01T08:02:42Z" hostname="05e813b05570" tests="1" skipped="0" failures="0" errors="0" time="0.067">
-    <testcase time="0.0669999999999993" classname="hello" name="hello_greets_the_entity"/>
+  <testsuite name="hello" timestamp="2023-06-01T08:08:29Z" hostname="4e023d13bc1b" tests="1" skipped="0" failures="0" errors="0" time="0.099">
+    <testcase time="0.0989999999999993" classname="hello" name="hello_greets_the_entity"/>
   </testsuite>
-  <testsuite name="inc_prop" timestamp="2023-06-01T08:02:42Z" hostname="05e813b05570" tests="2" skipped="0" failures="0" errors="0" time="0.038">
-    <testcase time="0.0370000000000008" classname="inc_prop" name="inc_prop_works_as_expected"/>
+  <testsuite name="inc_prop" timestamp="2023-06-01T08:08:29Z" hostname="4e023d13bc1b" tests="2" skipped="0" failures="0" errors="0" time="0.064">
+    <testcase time="0.0630000000000006" classname="inc_prop" name="inc_prop_works_as_expected"/>
     <testcase time="0.000999999999999446" classname="inc_prop" name="inc_prop_works_as_expected"/>
   </testsuite>
-  <testsuite name="prop_trans_inc_dens" timestamp="2023-06-01T08:02:42Z" hostname="05e813b05570" tests="1" skipped="0" failures="0" errors="0" time="0.006">
-    <testcase time="0.00600000000000023" classname="prop_trans_inc_dens" name="prop_trans_inc_dens_works_as_expected"/>
+  <testsuite name="prop_trans_inc_dens" timestamp="2023-06-01T08:08:29Z" hostname="4e023d13bc1b" tests="1" skipped="0" failures="0" errors="0" time="0.011">
+    <testcase time="0.0110000000000001" classname="prop_trans_inc_dens" name="prop_trans_inc_dens_works_as_expected"/>
   </testsuite>
-  <testsuite name="prop_trans_inc_dens_ce" timestamp="2023-06-01T08:02:42Z" hostname="05e813b05570" tests="1" skipped="0" failures="0" errors="0" time="0.005">
-    <testcase time="0.00499999999999989" classname="prop_trans_inc_dens_ce" name="prop_trans_inc_dens_ce_works_as_expected"/>
+  <testsuite name="prop_trans_inc_dens_ce" timestamp="2023-06-01T08:08:29Z" hostname="4e023d13bc1b" tests="1" skipped="0" failures="0" errors="0" time="0.008">
+    <testcase time="0.00800000000000001" classname="prop_trans_inc_dens_ce" name="prop_trans_inc_dens_ce_works_as_expected"/>
   </testsuite>
-  <testsuite name="shiny" timestamp="2023-06-01T08:02:42Z" hostname="05e813b05570" tests="1" skipped="0" failures="0" errors="0" time="3.167">
-    <testcase time="3.167" classname="shiny" name="The_Shiny_App_returns_a_proper_greeting"/>
+  <testsuite name="shiny" timestamp="2023-06-01T08:08:29Z" hostname="4e023d13bc1b" tests="1" skipped="0" failures="0" errors="0" time="3.978">
+    <testcase time="3.978" classname="shiny" name="The_Shiny_App_returns_a_proper_greeting"/>
   </testsuite>
 </testsuites>
