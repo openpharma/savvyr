@@ -43,7 +43,6 @@ prop_trans_inc_dens_ce <- function(data,
   assert_true(tau > 0)
   assert_subset(ce, c(2, 3))
 
-
   data$type_of_event_accounted <- ifelse(ce == 2 & data$type_of_event == 3, 0,
     ifelse(ce == 3 & data$type_of_event == 3, 2, data$type_of_event)
   )
