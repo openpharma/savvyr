@@ -59,8 +59,14 @@ prop_trans_inc_dens_ce <- function(data,
 
   ae_prob <- incidence_density / sum_incidence_densities * (1 - expected_time_to_event)
 
-  var1 <- ((expected_time_to_event * (incidence_density_ce * (1 / expected_time_to_event - 1) + tau * incidence_density * sum_incidence_densities)) / sum_incidence_densities^2)^2 * incidence_density / patient_time
-  var2 <- ((expected_time_to_event * incidence_density * (tau * sum_incidence_densities - 1 / expected_time_to_event + 1)) / sum_incidence_densities^2)^2 * incidence_density_ce / patient_time
+  var1_part1 <- incidence_density_ce * (1 / expected_time_to_event - 1) +
+    tau * incidence_density * sum_incidence_densities
+  var1_part2 <- (expected_time_to_event * var1_part1) / sum_incidence_densities^2
+  var1 <- var1_part2^2 * incidence_density / patient_time
+
+  var2_part1 <- incidence_density * (tau * sum_incidence_densities - 1 / expected_time_to_event + 1)
+  var2_part2 <- (expected_time_to_event * var2_part1) / sum_incidence_densities^2
+  var2 <- var2_part2^2 * incidence_density_ce / patient_time
 
   ae_prob_var <- var1 + var2
 
