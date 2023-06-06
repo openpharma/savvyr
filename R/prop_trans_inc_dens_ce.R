@@ -1,7 +1,7 @@
 #' Probability Transform Incidence Density Accounting for Competing Events
 #'
 #' This funciton calculates the incidence density of both adverse events and specified competing events
-#' observed in [0, tau] and then combines and transforms the incidence densities on a probability scale.
+#' observed in `[0, tau]` and then combines and transforms the incidence densities on a probability scale.
 #' Please also refer to formula (4) and (5) in
 #'
 #' Stegherr, R., Schmoor, C., Beyersmann, J. et al.

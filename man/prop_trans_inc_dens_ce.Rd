@@ -26,7 +26,7 @@ prop_trans_inc_dens_ce(data, ce, tau)
 }
 \description{
 This funciton calculates the incidence density of both adverse events and specified competing events
-observed in \link{0, tau} and then combines and transforms the incidence densities on a probability scale.
+observed in \verb{[0, tau]} and then combines and transforms the incidence densities on a probability scale.
 Please also refer to formula (4) and (5) in
 }
 \details{

@@ -4,9 +4,9 @@
 \name{savvyr-package}
 \alias{savvyr}
 \alias{savvyr-package}
-\title{savvyr: R Package Template}
+\title{savvyr: Survival Analysis for AdVerse Events with VarYing Follow-Up Times in R}
 \description{
-R package template with GitHub Actions workflows included.
+TODO
 }
 \seealso{
 Useful links:
@@ -17,7 +17,20 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: openpharma \email{openpharma@example.com}
+\strong{Maintainer}: Thomas Kuenzel \email{thomas.kuenzel@roche.com}
+
+Authors:
+\itemize{
+  \item Kaspar Rufibach \email{kaspar.rufibach@roche.com}
+  \item Regina Stegherr \email{regina.stegherr@uni-ulm.de}
+}
+
+Other contributors:
+\itemize{
+  \item Daniel Sabanes Bove \email{daniel.sabanes_bove@roche.com} [contributor]
+  \item F. Hoffmann-La Roche AG [copyright holder, funder]
+  \item Universität Ulm [copyright holder, funder]
+}
 
 }
 \keyword{internal}
