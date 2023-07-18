@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="generate_data" timestamp="2023-07-18T08:43:27Z" hostname="5cd44e438e5c" tests="4" skipped="0" failures="0" errors="0" time="0.101">
-    <testcase time="0.0659999999999999" classname="generate_data" name="generate_data_works_as_expected"/>
-    <testcase time="0.022" classname="generate_data" name="generate_data_works_as_expected"/>
-    <testcase time="0.012" classname="generate_data" name="generate_data_works_as_expected"/>
-    <testcase time="0.001" classname="generate_data" name="generate_data_works_as_expected"/>
+  <testsuite name="generate_data" timestamp="2023-07-18T08:47:01Z" hostname="8004d8390c50" tests="4" skipped="0" failures="0" errors="0" time="0.114">
+    <testcase time="0.0720000000000001" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.0259999999999999" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.014" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.002" classname="generate_data" name="generate_data_works_as_expected"/>
   </testsuite>
-  <testsuite name="inc_prop" timestamp="2023-07-18T08:43:28Z" hostname="5cd44e438e5c" tests="2" skipped="0" failures="0" errors="0" time="0.119">
-    <testcase time="0.117" classname="inc_prop" name="inc_prop_works_as_expected"/>
-    <testcase time="0.002" classname="inc_prop" name="inc_prop_works_as_expected"/>
+  <testsuite name="inc_prop" timestamp="2023-07-18T08:47:01Z" hostname="8004d8390c50" tests="2" skipped="0" failures="0" errors="0" time="0.165">
+    <testcase time="0.161" classname="inc_prop" name="inc_prop_works_as_expected"/>
+    <testcase time="0.004" classname="inc_prop" name="inc_prop_works_as_expected"/>
   </testsuite>
-  <testsuite name="prop_trans_inc_dens" timestamp="2023-07-18T08:43:28Z" hostname="5cd44e438e5c" tests="1" skipped="0" failures="0" errors="0" time="0.024">
-    <testcase time="0.024" classname="prop_trans_inc_dens" name="prop_trans_inc_dens_works_as_expected"/>
+  <testsuite name="prop_trans_inc_dens" timestamp="2023-07-18T08:47:01Z" hostname="8004d8390c50" tests="1" skipped="0" failures="0" errors="0" time="0.028">
+    <testcase time="0.028" classname="prop_trans_inc_dens" name="prop_trans_inc_dens_works_as_expected"/>
   </testsuite>
-  <testsuite name="prop_trans_inc_dens_ce" timestamp="2023-07-18T08:43:28Z" hostname="5cd44e438e5c" tests="1" skipped="0" failures="0" errors="0" time="0.009">
-    <testcase time="0.00900000000000001" classname="prop_trans_inc_dens_ce" name="prop_trans_inc_dens_ce_works_as_expected"/>
+  <testsuite name="prop_trans_inc_dens_ce" timestamp="2023-07-18T08:47:01Z" hostname="8004d8390c50" tests="1" skipped="0" failures="0" errors="0" time="0.01">
+    <testcase time="0.01" classname="prop_trans_inc_dens_ce" name="prop_trans_inc_dens_ce_works_as_expected"/>
   </testsuite>
 </testsuites>
