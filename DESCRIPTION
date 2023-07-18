@@ -7,7 +7,7 @@ Authors@R: c(
     person("Thomas", "Kuenzel", email = "thomas.kuenzel@roche.com", role = c("aut", "cre")),
     person("Kaspar", "Rufibach", email = "kaspar.rufibach@roche.com", role = "aut"),
     person("Regina", "Stegherr", email = "regina.stegherr@uni-ulm.de", role = "aut"),
-    person("Daniel", "Sabanes Bove", email = "daniel.sabanes_bove@roche.com", role = "ctb"),
+    person("Daniel", "Sabanes Bove", email = "daniel.sabanes_bove@roche.com", role = "aut"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd")),
     person("Universität Ulm", role = c("cph", "fnd"))
     )
@@ -30,6 +30,7 @@ Imports:
 Suggests:
     knitr,
     testthat (>= 2.0),
+    Rdpack,
     roxytypes,
     roxylint
 Remotes:
@@ -38,6 +39,8 @@ Remotes:
 Config/Needs/documentation:
     roxytypes,
     roxylint
+RdMacros:
+    Rdpack
 VignetteBuilder:
     knitr
 biocViews:

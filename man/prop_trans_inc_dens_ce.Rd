@@ -25,18 +25,15 @@ prop_trans_inc_dens_ce(data, ce, tau)
 }
 }
 \description{
-This funciton calculates the incidence density of both adverse events and specified competing events
+This function calculates the incidence density of both adverse events and specified competing events
 observed in \verb{[0, tau]} and then combines and transforms the incidence densities on a probability scale.
-Please also refer to formula (4) and (5) in
-}
-\details{
-Stegherr, R., Schmoor, C., Beyersmann, J. et al.
-Survival analysis for AdVerse events with VarYing follow-up times (SAVVY)—
-estimation of adverse event risks. Trials 22, 420 (2021).
-https://doi.org/10.1186/s13063-021-05354-x
+Please also refer to formulas (4) and (5) in \insertCite{stegherr_survival_2021;textual}{savvyr}.
 }
 \examples{
 set.seed(123)
 dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
 prop_trans_inc_dens_ce(dat, ce = 2, tau = 4)
+}
+\references{
+\insertRef{stegherr_survival_2021}{savvyr}
 }
