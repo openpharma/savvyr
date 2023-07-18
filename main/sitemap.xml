@@ -4,15 +4,6 @@
     <loc>https://openpharma.github.io/savvyr/main/404.html</loc>
   </url>
   <url>
-    <loc>https://openpharma.github.io/savvyr/main/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/main/articles/hello.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/main/articles/index.html</loc>
-  </url>
-  <url>
     <loc>https://openpharma.github.io/savvyr/main/authors.html</loc>
   </url>
   <url>
@@ -25,21 +16,18 @@
     <loc>https://openpharma.github.io/savvyr/main/reference/generate_data.html</loc>
   </url>
   <url>
-    <loc>https://openpharma.github.io/savvyr/main/reference/hello.html</loc>
-  </url>
-  <url>
     <loc>https://openpharma.github.io/savvyr/main/reference/inc_prop.html</loc>
   </url>
   <url>
     <loc>https://openpharma.github.io/savvyr/main/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://openpharma.github.io/savvyr/main/reference/plumber_api.html</loc>
+    <loc>https://openpharma.github.io/savvyr/main/reference/prop_trans_inc_dens.html</loc>
+  </url>
+  <url>
+    <loc>https://openpharma.github.io/savvyr/main/reference/prop_trans_inc_dens_ce.html</loc>
   </url>
   <url>
     <loc>https://openpharma.github.io/savvyr/main/reference/savvyr-package.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/main/reference/shiny_app.html</loc>
   </url>
 </urlset>
