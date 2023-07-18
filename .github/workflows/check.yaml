@@ -6,7 +6,6 @@ on:
     types:
       - opened
       - synchronize
-      - reopened
       - ready_for_review
     branches:
       - main
@@ -14,6 +13,13 @@ on:
     branches:
       - main
   workflow_dispatch:
+
+  # Rerun workflows once pkgdown has finished running, to add coverage
+  # and unit test report to gh-pages branch.
+  workflow_run:
+    workflows: ["Docs 📚"]
+    types:
+      - completed
 
 jobs:
   audit:
@@ -27,7 +33,7 @@ jobs:
     with:
       additional-r-cmd-check-params: --as-cran
   coverage:
-    name: Coverage 📔 
+    name: Coverage 📔
     uses: insightsengineering/r.pkg.template/.github/workflows/test-coverage.yaml@main
     secrets:
       REPO_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -53,6 +59,12 @@ jobs:
     if: github.event_name == 'pull_request'
     name: Check URLs 🌐
     uses: insightsengineering/r.pkg.template/.github/workflows/links.yaml@main
+  vbump:
+    name: Version Bump 🤜🤛
+    if: github.event_name == 'push'
+    uses: insightsengineering/r.pkg.template/.github/workflows/version-bump.yaml@main
+    secrets:
+      REPO_GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
   version:
     name: Version Check 🏁
     uses: insightsengineering/r.pkg.template/.github/workflows/version.yaml@main
@@ -65,7 +77,3 @@ jobs:
     uses: insightsengineering/r.pkg.template/.github/workflows/style.yaml@main
     with:
       auto-update: true
-  grammar:
-    if: github.event_name == 'pull_request'
-    name: Grammar Check 🔤
-    uses: insightsengineering/r.pkg.template/.github/workflows/grammar.yaml@main
