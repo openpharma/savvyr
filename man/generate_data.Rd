@@ -28,12 +28,16 @@ competing event.
 }
 }
 \description{
-This generates the dataset denoted by \code{S1} in Table 4 of R. Stegherr, Schmoor, Lübbert,
-et al. (2021), i.e. we assume constant hazards for the adverse event (AE) hazard, the
-hazard for the competing event of death, and the hazard for the "soft" competing events.
-Censoring is uniform in the given range.
+This generates the dataset denoted by \code{S1} in Table 4 of
+\insertCite{stegherr_estimating_2021;textual}{savvyr},
+i.e. we assume constant hazards for the adverse event (AE) hazard, the
+hazard for the competing event of death, and the hazard for the "soft"
+competing events. Censoring is uniform in the given range.
 }
 \examples{
 set.seed(123)
 generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
+}
+\references{
+\insertRef{stegherr_estimating_2021}{savvyr}
 }

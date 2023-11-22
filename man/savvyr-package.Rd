@@ -23,11 +23,11 @@ Authors:
 \itemize{
   \item Kaspar Rufibach \email{kaspar.rufibach@roche.com}
   \item Regina Stegherr \email{regina.stegherr@uni-ulm.de}
+  \item Daniel Sabanes Bove \email{daniel.sabanes_bove@roche.com}
 }
 
 Other contributors:
 \itemize{
-  \item Daniel Sabanes Bove \email{daniel.sabanes_bove@roche.com} [contributor]
   \item F. Hoffmann-La Roche AG [copyright holder, funder]
   \item Universität Ulm [copyright holder, funder]
 }

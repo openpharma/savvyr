@@ -1,5 +1,6 @@
 #' Probability Transform Incidence Density Accounting for Competing Events
 #'
+<<<<<<< HEAD
 #' This funciton calculates the incidence density of both adverse events and specified competing events
 #' observed in `[0, tau]` and then combines and transforms the incidence densities on a probability scale.
 #' Please also refer to formula (4) and (5) in
@@ -8,6 +9,11 @@
 #' Survival analysis for AdVerse events with VarYing follow-up times (SAVVY)—
 #' estimation of adverse event risks. Trials 22, 420 (2021).
 #' https://doi.org/10.1186/s13063-021-05354-x
+=======
+#' This function calculates the incidence density of both adverse events and specified competing events
+#' observed in `[0, tau]` and then combines and transforms the incidence densities on a probability scale.
+#' Please also refer to formulas (4) and (5) in \insertCite{stegherr_survival_2021;textual}{savvyr}.
+>>>>>>> main
 #'
 #' @typed data: data.frame
 #'  with columns including
@@ -28,6 +34,12 @@
 #'
 #' @export
 #'
+<<<<<<< HEAD
+=======
+#' @references
+#' \insertRef{stegherr_survival_2021}{savvyr}
+#'
+>>>>>>> main
 #' @examples
 #' set.seed(123)
 #' dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
