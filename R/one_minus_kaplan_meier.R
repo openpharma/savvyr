@@ -38,22 +38,22 @@ one_minus_kaplan_meier <- function(data,
   assert_number(tau, finite = TRUE)
   assert_true(tau > 0)
 
-  if(nrow(data %>% filter(type_of_event == 1)) == 0){
+  if (nrow(data %>% filter(type_of_event == 1)) == 0) {
     ae_prob <- 0
     ae_prob_var <- 0
   } else {
     help <- data.frame(id = data$id)
     help$from <- 0
     help$to <- ifelse(data$type_of_event != 1, "cens", data$type_of_event)
-    help$time <-ifelse(data$time_to_event == 0, 0.001, data$time_to_event)
+    help$time <- ifelse(data$time_to_event == 0, 0.001, data$time_to_event)
 
     tra <- matrix(FALSE, 2, 2)
     tra[1, 2] <- TRUE
-    state.names <-as.character(0:1)
-    etmmm <-etm(help, state.names, tra, "cens", s = 0)
+    state.names <- as.character(0:1)
+    etmmm <- etm(help, state.names, tra, "cens", s = 0)
 
-    ae_prob <- summary(etmmm)[[2]][sum(summary(etmmm)[[2]]$time <= tau),]$P
-    ae_prob_var <- summary(etmmm)[[2]][sum(summary(etmmm)[[2]]$time <= tau),]$var
+    ae_prob <- summary(etmmm)[[2]][sum(summary(etmmm)[[2]]$time <= tau), ]$P
+    ae_prob_var <- summary(etmmm)[[2]][sum(summary(etmmm)[[2]]$time <= tau), ]$var
   }
 
   c("ae_prob" = ae_prob, "ae_prob_var" = ae_prob_var)
