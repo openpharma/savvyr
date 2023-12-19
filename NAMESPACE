@@ -2,6 +2,7 @@
 
 export(generate_data)
 export(inc_prop)
+export(one_minus_kaplan_meier)
 export(prop_trans_inc_dens)
 export(prop_trans_inc_dens_ce)
 import(checkmate)
