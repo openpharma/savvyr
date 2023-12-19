@@ -23,18 +23,15 @@ one_minus_kaplan_meier(data, tau)
 }
 }
 \description{
-This funciton calculates the one minus Kaplan-Meier estimator of adverse events (while censoring all competing events)
+This function calculates the one minus Kaplan-Meier estimator of adverse events (while censoring all competing events)
 observed in \verb{[0, tau]}.
-Please also refer to formula (4) in
-}
-\details{
-Stegherr R, Beyersmann J, Jehl V, Rufibach K, Leverkus F, Schmoor C, Friede T.
-Survival analysis for adverse events with varying follow-up times (SAVVY):
-Rationale and statistical concept of a meta-analytic study. Biom J. 2021; 63:650–70.
-https://doi.org/10.1002/bimj.201900347.
+Please also refer to formula (4) in \insertCite{stegherr_meta_analytic_2021;textual}{savvyr}.
 }
 \examples{
 set.seed(123)
 dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
 one_minus_kaplan_meier(dat, tau = 4)
+}
+\references{
+\insertRef{stegherr_meta_analytic_2021}{savvyr}
 }

@@ -2,12 +2,7 @@
 #'
 #' This function calculates the one minus Kaplan-Meier estimator of adverse events (while censoring all competing events)
 #' observed in `[0, tau]`.
-#' Please also refer to formula (4) in
-#'
-#' Stegherr R, Beyersmann J, Jehl V, Rufibach K, Leverkus F, Schmoor C, Friede T.
-#' Survival analysis for adverse events with varying follow-up times (SAVVY):
-#' Rationale and statistical concept of a meta-analytic study. Biom J. 2021; 63:650–70.
-#' https://doi.org/10.1002/bimj.201900347.
+#' Please also refer to formula (4) in \insertCite{stegherr_meta_analytic_2021;textual}{savvyr}.
 #'
 #' @typed data: data.frame
 #'  with columns including
@@ -25,6 +20,9 @@
 #'
 #' @export
 #'
+#' @references
+#' \insertRef{stegherr_meta_analytic_2021}{savvyr}
+#'
 #' @examples
 #' set.seed(123)
 #' dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
@@ -38,7 +36,8 @@ one_minus_kaplan_meier <- function(data,
   assert_number(tau, finite = TRUE)
   assert_true(tau > 0)
 
-  if (nrow(data %>% filter(type_of_event == 1)) == 0) {
+  n_comp_events <- sum(data$type_of_event == 1)
+  if (n_comp_events == 0) {
     ae_prob <- 0
     ae_prob_var <- 0
   } else {
@@ -47,13 +46,16 @@ one_minus_kaplan_meier <- function(data,
     help$to <- ifelse(data$type_of_event != 1, "cens", data$type_of_event)
     help$time <- ifelse(data$time_to_event == 0, 0.001, data$time_to_event)
 
-    tra <- matrix(FALSE, 2, 2)
-    tra[1, 2] <- TRUE
+    trans_mat <- matrix(FALSE, 2, 2)
+    trans_mat[1, 2] <- TRUE
     state.names <- as.character(0:1)
-    etmmm <- etm(help, state.names, tra, "cens", s = 0)
 
-    ae_prob <- summary(etmmm)[[2]][sum(summary(etmmm)[[2]]$time <= tau), ]$P
-    ae_prob_var <- summary(etmmm)[[2]][sum(summary(etmmm)[[2]]$time <= tau), ]$var
+    etmmm <- etm::etm(help, state.names, trans_mat, "cens", s = 0)
+    etm_sum_prob <- summary(etmmm)[[2]]
+    n_time_below_tau <- sum(etm_sum_prob$time <= tau)
+    etm_sum_prob_selected <- etm_sum_prob[n_time_below_tau, ]
+    ae_prob <- etm_sum_prob_selected$P
+    ae_prob_var <- etm_sum_prob_selected$var
   }
 
   c("ae_prob" = ae_prob, "ae_prob_var" = ae_prob_var)
