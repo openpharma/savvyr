@@ -23,8 +23,8 @@ one_minus_kaplan_meier(data, tau)
 }
 }
 \description{
-This function calculates the one minus Kaplan-Meier estimator of adverse events (while censoring all competing events)
-observed in \verb{[0, tau]}.
+This function calculates the one minus Kaplan-Meier estimator of
+adverse events (while censoring all competing events) observed in \verb{[0, tau]}.
 Please also refer to formula (4) in \insertCite{stegherr_meta_analytic_2021;textual}{savvyr}.
 }
 \examples{

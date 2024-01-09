@@ -1,7 +1,7 @@
 #' One Minus Kaplan-Meier
 #'
-#' This function calculates the one minus Kaplan-Meier estimator of adverse events (while censoring all competing events)
-#' observed in `[0, tau]`.
+#' This function calculates the one minus Kaplan-Meier estimator of
+#' adverse events (while censoring all competing events) observed in `[0, tau]`.
 #' Please also refer to formula (4) in \insertCite{stegherr_meta_analytic_2021;textual}{savvyr}.
 #'
 #' @typed data: data.frame
@@ -48,9 +48,9 @@ one_minus_kaplan_meier <- function(data,
 
     trans_mat <- matrix(FALSE, 2, 2)
     trans_mat[1, 2] <- TRUE
-    state.names <- as.character(0:1)
+    state_names <- as.character(0:1)
 
-    etmmm <- etm::etm(help, state.names, trans_mat, "cens", s = 0)
+    etmmm <- etm::etm(help, state_names, trans_mat, "cens", s = 0)
     etm_sum_prob <- summary(etmmm)[[2]]
     n_time_below_tau <- sum(etm_sum_prob$time <= tau)
     etm_sum_prob_selected <- etm_sum_prob[n_time_below_tau, ]
