@@ -16,6 +16,9 @@
 #' @typed tau: number
 #'  milestone at which Aalen-Johansen is computed.
 #'
+#' @typed ce: number
+#'  code for competing event.
+#'
 #' @typedreturn vector
 #'  with the following entries:
 #'
@@ -56,12 +59,12 @@ aalen_johansen <- function(data,
   c1 <- sum(data$type_of_event_accounted == 1)
   c2 <- sum(data$type_of_event_accounted == 2)
 
-  if(c1 == 0){
+  if (c1 == 0) {
     ae_prob <- 0
     ae_prob_var <- 0
   }
 
-  if(c2 == 0){
+  if (c2 == 0) {
     ce_prob <- 0
     ce_prob_var <- 0
   }
@@ -69,22 +72,22 @@ aalen_johansen <- function(data,
   # define auxiliary objects
   help <- data.frame(id = data$id)
   help$from <- 0
-  help$time <-ifelse(time == 0, 0.001, time)
+  help$time <- ifelse(time == 0, 0.001, time)
   tra <- matrix(FALSE, 2, 2)
   tra[1, 2] <- TRUE
-  state.names <- as.character(0:1)
+  state_names <- as.character(0:1)
 
-  if(c1 == 0 & c2 != 0){
+  if (c1 == 0 && c2 != 0){
     help$to <- ifelse(type2 != 2, "cens", type2 - 1)
-    etmmm <-  etm::etm(help, state.names, tra, "cens", s = 0)
+    etmmm <-  etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)[[2]]
     ce_prob <- setmm[sum(setmm$time <= tau),]$P
     ce_prob_var <- setmm[sum(setmm$time <= tau),]$var
   }
 
-  if(c1 != 0 & c2 == 0){
+  if (c1 != 0 && c2 == 0){
     help$to <- ifelse(type2 != 1, "cens", type2)
-    etmmm <-  etm::etm(help, state.names, tra, "cens", s = 0)
+    etmmm <-  etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)[[2]]
 
     ae_prob <- setmm[sum(setmm$time <= tau),]$P
@@ -96,8 +99,8 @@ aalen_johansen <- function(data,
 
     tra <- matrix(FALSE, 3, 3)
     tra[1, 2:3] <- TRUE
-    state.names <- as.character(0:2)
-    etmmm <-  etm::etm(help, state.names, tra, "cens", s = 0)
+    state_names <- as.character(0:2)
+    etmmm <-  etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)
 
     ae_prob <- setmm[[2]][sum(setmm[[2]]$time <= tau),]$P
