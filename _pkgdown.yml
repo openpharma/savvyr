@@ -16,3 +16,4 @@ navbar:
         - prop_trans_inc_dens
         - prop_trans_inc_dens_ce
         - one_minus_kaplan_meier
+        - aalen_johansen
