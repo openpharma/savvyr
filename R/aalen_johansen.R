@@ -26,7 +26,7 @@
 #' @export
 #'
 #' @references
-#' \insertRef{stegherr_meta_analytic_2021}{savvyr}
+#' \insertRef{stegherr_estimating_2021}{savvyr}
 #'
 #' @examples
 #' set.seed(123)
