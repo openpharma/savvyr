@@ -39,6 +39,6 @@ test_that("Aalen Johansen works without competing events", {
   df <- df[df$type_of_event != 2, ]
   df <- df[df$type_of_event != 3, ]
   result <- aalen_johansen(data = df, ce = 2, tau = 4)
-  expected <- c(ae_prob = 0.5897, ae_prob_var = 0.0404 , ce_prob = 0, ce_prob_var = 0)
+  expected <- c(ae_prob = 0.5897, ae_prob_var = 0.0404, ce_prob = 0, ce_prob_var = 0)
   expect_equal(result, expected, tolerance = 1e-4)
 })
