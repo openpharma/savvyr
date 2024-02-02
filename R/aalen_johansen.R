@@ -2,11 +2,7 @@
 #'
 #' This function calculates the Aalen Johansen estimator of
 #' adverse events  observed in `[0, tau]`.
-#' Please also refer to  \insertCite{stegherr_meta_analytic_2021;textual}{savvyr}.
-#'
-#' Estimating and comparing adverse event probabilities in the presence of varying follow-up times and competing events
-#' Regina Stegherr, Claudia Schmoor, Michael Lübbert, Tim Friede, Jan Beyersmann
-#' First published: 18 May 2021 https://doi.org/10.1002/pst.2130
+#' Please also refer to  \insertCite{stegherr_estimating_2021;textual}{savvyr}.
 #'
 #' @typed data: data.frame
 #'  with columns including
@@ -35,20 +31,26 @@
 #' @examples
 #' set.seed(123)
 #' dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
-#' one_minus_kaplan_meier(dat, tau = 4)
+#' aalen_johansen(dat, ce = 2, tau = 4)
 aalen_johansen <- function(data,
                            ce,
                            tau) {
   assert_data_frame(data, any.missing = FALSE, min.rows = 1, min.cols = 2)
+  assert_subset(ce, c(2, 3))
+  assert_true(tau > 0)
   assert_numeric(data$time_to_event, lower = 0, finite = TRUE)
   assert_integerish(data$type_of_event, any.missing = FALSE)
   assert_subset(data$type_of_event, c(0, 1, 2, 3))
   assert_number(tau, finite = TRUE)
-  assert_true(tau > 0)
-  assert_subset(ce, c(2, 3))
 
-  data$type_of_event_accounted <- ifelse(ce == 2 & data$type_of_event == 3, 0,
-    ifelse(ce == 3 & data$type_of_event == 3, 2, data$type_of_event)
+  data$type_of_event_accounted <- ifelse(
+    ce == 2 & data$type_of_event == 3,
+    0,
+    ifelse(
+      ce == 3 & data$type_of_event == 3,
+      2,
+      data$type_of_event
+    )
   )
 
   time <- data$time_to_event
@@ -95,7 +97,7 @@ aalen_johansen <- function(data,
     ae_prob_var <- setmm[sum(setmm$time <= tau), ]$var
   }
 
-  if (c1 != 0 & c2 != 0) {
+  if (c1 != 0 && c2 != 0) {
     help$to <- ifelse(!(type2 %in% c(1, 2)), "cens", type2)
 
     tra <- matrix(FALSE, 3, 3)
@@ -113,7 +115,9 @@ aalen_johansen <- function(data,
 
 
   c(
-    "ae_prob" = ae_prob, "ae_prob_var" = ae_prob_var, "ce_prob" = ce_prob,
+    "ae_prob" = ae_prob,
+    "ae_prob_var" = ae_prob_var,
+    "ce_prob" = ce_prob,
     "ce_prob_var" = ce_prob_var
   )
 }

@@ -29,17 +29,12 @@ aalen_johansen(data, ce, tau)
 \description{
 This function calculates the Aalen Johansen estimator of
 adverse events  observed in \verb{[0, tau]}.
-Please also refer to  \insertCite{stegherr_meta_analytic_2021;textual}{savvyr}.
-}
-\details{
-Estimating and comparing adverse event probabilities in the presence of varying follow-up times and competing events
-Regina Stegherr, Claudia Schmoor, Michael Lübbert, Tim Friede, Jan Beyersmann
-First published: 18 May 2021 https://doi.org/10.1002/pst.2130
+Please also refer to  \insertCite{stegherr_estimating_2021;textual}{savvyr}.
 }
 \examples{
 set.seed(123)
 dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft = 5)
-one_minus_kaplan_meier(dat, tau = 4)
+aalen_johansen(dat, ce = 2, tau = 4)
 }
 \references{
 \insertRef{stegherr_meta_analytic_2021}{savvyr}
