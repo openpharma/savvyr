@@ -39,7 +39,6 @@
 aalen_johansen <- function(data,
                            ce,
                            tau) {
-
   assert_data_frame(data, any.missing = FALSE, min.rows = 1, min.cols = 2)
   assert_numeric(data$time_to_event, lower = 0, finite = TRUE)
   assert_integerish(data$type_of_event, any.missing = FALSE)
@@ -77,25 +76,27 @@ aalen_johansen <- function(data,
   tra[1, 2] <- TRUE
   state_names <- as.character(0:1)
 
-  if (c1 == 0 && c2 != 0){
+
+  if (c1 == 0 && c2 != 0) {
     help$to <- ifelse(type2 != 2, "cens", type2 - 1)
     etmmm <-  etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)[[2]]
-    ce_prob <- setmm[sum(setmm$time <= tau),]$P
-    ce_prob_var <- setmm[sum(setmm$time <= tau),]$var
+    ce_prob <- setmm[sum(setmm$time <= tau), ]$P
+    ce_prob_var <- setmm[sum(setmm$time <= tau), ]$var
   }
 
-  if (c1 != 0 && c2 == 0){
+
+  if (c1 != 0 && c2 == 0) {
     help$to <- ifelse(type2 != 1, "cens", type2)
     etmmm <-  etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)[[2]]
 
-    ae_prob <- setmm[sum(setmm$time <= tau),]$P
-    ae_prob_var <- setmm[sum(setmm$time <= tau),]$var
+    ae_prob <- setmm[sum(setmm$time <= tau), ]$P
+    ae_prob_var <- setmm[sum(setmm$time <= tau), ]$var
   }
 
-  if(c1 != 0 & c2 != 0){
-    help$to <- ifelse(!(type2 %in% c(1, 2)),"cens", type2)
+  if (c1 != 0 & c2 != 0) {
+    help$to <- ifelse(!(type2 %in% c(1, 2)), "cens", type2)
 
     tra <- matrix(FALSE, 3, 3)
     tra[1, 2:3] <- TRUE
@@ -103,14 +104,16 @@ aalen_johansen <- function(data,
     etmmm <-  etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)
 
-    ae_prob <- setmm[[2]][sum(setmm[[2]]$time <= tau),]$P
-    ae_prob_var <- setmm[[2]][sum(setmm[[2]]$time <= tau),]$var
+    ae_prob <- setmm[[2]][sum(setmm[[2]]$time <= tau), ]$P
+    ae_prob_var <- setmm[[2]][sum(setmm[[2]]$time <= tau), ]$var
 
-    ce_prob <- setmm[[3]][sum(setmm[[3]]$time <= tau),]$P
-    ce_prob_var <- setmm[[3]][sum(setmm[[3]]$time <= tau),]$var
+    ce_prob <- setmm[[3]][sum(setmm[[3]]$time <= tau), ]$P
+    ce_prob_var <- setmm[[3]][sum(setmm[[3]]$time <= tau), ]$var
   }
 
 
-  c("ae_prob" = ae_prob, "ae_prob_var" = ae_prob_var,"ce_prob" = ce_prob,
-    "ce_prob_var" = ce_prob_var)
+  c(
+    "ae_prob" = ae_prob, "ae_prob_var" = ae_prob_var, "ce_prob" = ce_prob,
+    "ce_prob_var" = ce_prob_var
+  )
 }
