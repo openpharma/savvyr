@@ -79,7 +79,7 @@ aalen_johansen <- function(data,
 
   if (c1 == 0 && c2 != 0) {
     help$to <- ifelse(type2 != 2, "cens", type2 - 1)
-    etmmm <-  etm::etm(help, state_names, tra, "cens", s = 0)
+    etmmm <- etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)[[2]]
     ce_prob <- setmm[sum(setmm$time <= tau), ]$P
     ce_prob_var <- setmm[sum(setmm$time <= tau), ]$var
@@ -88,7 +88,7 @@ aalen_johansen <- function(data,
 
   if (c1 != 0 && c2 == 0) {
     help$to <- ifelse(type2 != 1, "cens", type2)
-    etmmm <-  etm::etm(help, state_names, tra, "cens", s = 0)
+    etmmm <- etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)[[2]]
 
     ae_prob <- setmm[sum(setmm$time <= tau), ]$P
@@ -101,7 +101,7 @@ aalen_johansen <- function(data,
     tra <- matrix(FALSE, 3, 3)
     tra[1, 2:3] <- TRUE
     state_names <- as.character(0:2)
-    etmmm <-  etm::etm(help, state_names, tra, "cens", s = 0)
+    etmmm <- etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)
 
     ae_prob <- setmm[[2]][sum(setmm[[2]]$time <= tau), ]$P
