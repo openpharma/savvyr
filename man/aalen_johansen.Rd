@@ -37,5 +37,5 @@ dat <- generate_data(n = 5, cens = c(2, 5), haz_ae = 2, haz_death = 3, haz_soft 
 aalen_johansen(dat, ce = 2, tau = 4)
 }
 \references{
-\insertRef{stegherr_meta_analytic_2021}{savvyr}
+\insertRef{stegherr_estimating_2021}{savvyr}
 }
