@@ -1,0 +1,111 @@
+---
+title: "SAVVY: estimation of AE probabilities"
+package: savvyr
+output:
+  rmarkdown::html_vignette:
+          toc: true
+vignette: |
+  %\VignetteEncoding{UTF-8}
+  %\VignetteIndexEntry{SAVVY: estimation of AE probabilities}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options:
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r, include=TRUE, echo=TRUE}
+# packages
+packs <- c("data.table", "etm", "survival", "mvna", "knitr", "kableExtra")    
+for (i in 1:length(packs)){library(packs[i], character.only = TRUE)}
+```
+
+# Estimation of AE probabilities
+
+We generate the dataset $S1$ in @stegherr_20_sap using the parameter values for Arm A:
+
+```{r, include=TRUE, echo=TRUE}
+
+# sample size
+N <- 200
+
+# support of uniform censoring distribution
+min.cens <- 0
+max.cens <- 1000
+
+# hazards for the three event types
+haz.AE <- 0.00265
+haz.death <- 0.00151
+haz.soft <- 0.00227
+
+
+
+# generate dataset
+set.seed(2020)
+dat1 <- generate_data(N, cens = c(min.cens, max.cens), haz.AE, haz.death, haz.soft)
+
+
+# compute tau
+tau <- max(dat1[, "time_to_event"])
+```
+
+The structure of the dataset looks as follows:
+
+```{r, include=TRUE, echo=TRUE}
+kable(head(dat1, 10), align = c("crcr"))
+```
+
+For this dataset we then compute all the estimators that enter the comparison in our papers:
+
+```{r, include=TRUE, echo=TRUE}
+
+# compute each estimator
+IP <- inc_prop(dat1, tau)
+ID <- prop_trans_inc_dens(dat1, tau)
+KM <- one_minus_kaplan_meier(dat1, tau)
+
+# competing event "death only"
+IDCE2 <- prop_trans_inc_dens_ce(dat1, ce = 2, tau)
+AJ2 <- aalen_johansen(dat1, ce = 2, tau)
+
+# account for all competing events
+IDCE3 <- prop_trans_inc_dens_ce(dat1, ce = 3, tau)
+AJ3 <- aalen_johansen(dat1, ce = 3, tau)
+
+# display
+tab <- rbind(IP, ID, KM, IDCE2, AJ2[1:2], IDCE3, AJ3[1:2])
+colnames(tab) <- c("estimated AE probability", "variance of estimation")
+rownames(tab) <- c("incidence proportion", "probability transform incidence density ignoring competing event",
+                   "1 - Kaplan-Meier", "probability transform incidence density (death only)", 
+                   "Aalen-Johansen (death only), AE risk", "probability transform incidence density (all CEs)",
+                   "Aalen-Johansen (all CEs), AE risk")
+
+# probability of AE
+kable(tab, digits = c(3, 5))
+```
+
+Finally, the estimated probabilities of competing events based on the Aalen-Johansen estimators:
+
+```{r, include=TRUE, echo=TRUE}
+# display
+tab <- rbind(AJ2[3:4 ], AJ3[3:4 ])
+colnames(tab) <- c("estimated probability", "variance of estimation")
+rownames(tab) <- c("Aalen-Johansen (death only), CE risk",
+                   "Aalen-Johansen (all CEs), CE risk")
+
+# probability of AE
+kable(tab, digits = c(3, 5))
+```
+
+# References
+
+Rufibach, Kaspar, Regina Stegherr, Claudia Schmoor, Valentine Jehl, Arthur Allignol, Annette Boeckenhoff, Cornelia Dunger-Baldauf, et al. 2022. “Survival analysis for AdVerse events with VarYing follow-up times (SAVVY) – comparison of adverse event risks in randomized controlled trials.” Statistics in Biopharmaceutical Research, Accepted.
+Stegherr, Regina, Jan Beyersmann, Valentine Jehl, Kaspar Rufibach, Friedhelm Leverkus, Claudia Schmoor, and Tim Friede. 2021. “Survival Analysis for AdVerse Events with VarYing Follow-up Times (SAVVY): Rationale and Statistical Concept of a Meta-Analytic Study.” Biometrical Journal 63 (March): 650–70.
+Stegherr, R., C. Schmoor, J. Beyersmann, K. Rufibach, V. Jehl, A. Brückner, L. Eisele, et al. 2021. “Survival analysis for AdVerse events with VarYing follow-up times (SAVVY)-estimation of adverse event risks.” Trials 22 (1): 420.
+Stegherr, R., C. Schmoor, M. Lübbert, T. Friede, and J. Beyersmann. 2021. “Estimating and comparing adverse event probabilities in the presence of varying follow-up times and competing events.” Pharmaceutical Statistics 20 (6): 1125–46
