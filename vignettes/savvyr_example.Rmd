@@ -22,8 +22,10 @@ knitr::opts_chunk$set(
 
 ```{r, include=TRUE, echo=TRUE}
 # packages
-packs <- c("data.table", "etm", "survival", "mvna", "knitr", "kableExtra")    
-for (i in 1:length(packs)){library(packs[i], character.only = TRUE)}
+packs <- c("data.table", "etm", "survival", "mvna", "knitr", "kableExtra")
+for (i in 1:length(packs)) {
+  library(packs[i], character.only = TRUE)
+}
 ```
 
 # Estimation of AE probabilities
@@ -31,7 +33,6 @@ for (i in 1:length(packs)){library(packs[i], character.only = TRUE)}
 We generate the dataset $S1$ in @stegherr_20_sap using the parameter values for Arm A:
 
 ```{r, include=TRUE, echo=TRUE}
-
 # sample size
 N <- 200
 
@@ -64,7 +65,6 @@ kable(head(dat1, 10), align = c("crcr"))
 For this dataset we then compute all the estimators that enter the comparison in our papers:
 
 ```{r, include=TRUE, echo=TRUE}
-
 # compute each estimator
 IP <- inc_prop(dat1, tau)
 ID <- prop_trans_inc_dens(dat1, tau)
@@ -81,10 +81,12 @@ AJ3 <- aalen_johansen(dat1, ce = 3, tau)
 # display
 tab <- rbind(IP, ID, KM, IDCE2, AJ2[1:2], IDCE3, AJ3[1:2])
 colnames(tab) <- c("estimated AE probability", "variance of estimation")
-rownames(tab) <- c("incidence proportion", "probability transform incidence density ignoring competing event",
-                   "1 - Kaplan-Meier", "probability transform incidence density (death only)", 
-                   "Aalen-Johansen (death only), AE risk", "probability transform incidence density (all CEs)",
-                   "Aalen-Johansen (all CEs), AE risk")
+rownames(tab) <- c(
+  "incidence proportion", "probability transform incidence density ignoring competing event",
+  "1 - Kaplan-Meier", "probability transform incidence density (death only)",
+  "Aalen-Johansen (death only), AE risk", "probability transform incidence density (all CEs)",
+  "Aalen-Johansen (all CEs), AE risk"
+)
 
 # probability of AE
 kable(tab, digits = c(3, 5))
@@ -94,10 +96,12 @@ Finally, the estimated probabilities of competing events based on the Aalen-Joha
 
 ```{r, include=TRUE, echo=TRUE}
 # display
-tab <- rbind(AJ2[3:4 ], AJ3[3:4 ])
+tab <- rbind(AJ2[3:4], AJ3[3:4])
 colnames(tab) <- c("estimated probability", "variance of estimation")
-rownames(tab) <- c("Aalen-Johansen (death only), CE risk",
-                   "Aalen-Johansen (all CEs), CE risk")
+rownames(tab) <- c(
+  "Aalen-Johansen (death only), CE risk",
+  "Aalen-Johansen (all CEs), CE risk"
+)
 
 # probability of AE
 kable(tab, digits = c(3, 5))
