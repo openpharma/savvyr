@@ -83,8 +83,9 @@ aalen_johansen <- function(data,
     help$to <- ifelse(type2 != 2, "cens", type2 - 1)
     etmmm <- etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)[[2]]
-    ce_prob <- setmm[sum(setmm$time <= tau), ]$P
-    ce_prob_var <- setmm[sum(setmm$time <= tau), ]$var
+    trans_mat_tau <- setmm[sum(setmm$time <= tau), ]
+    ce_prob <- trans_mat_tau$P
+    ce_prob_var <- trans_mat_tau$var
   }
 
 
@@ -92,9 +93,9 @@ aalen_johansen <- function(data,
     help$to <- ifelse(type2 != 1, "cens", type2)
     etmmm <- etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)[[2]]
-
-    ae_prob <- setmm[sum(setmm$time <= tau), ]$P
-    ae_prob_var <- setmm[sum(setmm$time <= tau), ]$var
+    trans_mat_tau <- setmm[sum(setmm$time <= tau), ]
+    ae_prob <- trans_mat_tau$P
+    ae_prob_var <- trans_mat_tau$var
   }
 
   if (c1 != 0 && c2 != 0) {
@@ -106,11 +107,13 @@ aalen_johansen <- function(data,
     etmmm <- etm::etm(help, state_names, tra, "cens", s = 0)
     setmm <- summary(etmmm)
 
-    ae_prob <- setmm[[2]][sum(setmm[[2]]$time <= tau), ]$P
-    ae_prob_var <- setmm[[2]][sum(setmm[[2]]$time <= tau), ]$var
+    trans_mat_tau_ae <- setmm[[2]][sum(setmm[[2]]$time <= tau), ]
+    ae_prob <- trans_mat_tau_ae$P
+    ae_prob_var <- trans_mat_tau_ae$var
 
-    ce_prob <- setmm[[3]][sum(setmm[[3]]$time <= tau), ]$P
-    ce_prob_var <- setmm[[3]][sum(setmm[[3]]$time <= tau), ]$var
+    trans_mat_tau_ce <- setmm[[3]][sum(setmm[[3]]$time <= tau), ]
+    ce_prob <- trans_mat_tau_ce$P
+    ce_prob_var <- trans_mat_tau_ce$var
   }
 
 
