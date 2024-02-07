@@ -1,13 +1,13 @@
 test_that("inc_prop works as expected", {
-  set.seed(123)
-  result <- generate_data(
-    n = 10,
-    cens = c(0, 0.5),
-    haz_ae = 4.3,
-    haz_death = 5.3,
-    haz_soft = 1.2
+  set.seed(23)
+  df <- generate_data(
+    n = 25,
+    cens = c(0.2, 3),
+    haz_ae = 0.2,
+    haz_death = 0.3,
+    haz_soft = 0.5
   )
-  ip <- inc_prop(data = result, tau = 4)
-  expect_vector(ip, size = 2)
-  expect_named(ip, c("ae_prob", "ae_prob_var"))
+  result <- inc_prop(data = df, tau = 4)
+  expected <- c(ae_prob = 0.2, ae_prob_var = 0.0064)
+  expect_equal(result, expected, tolerance = 1e-4)
 })
