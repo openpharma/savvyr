@@ -1,12 +1,13 @@
 ---
-title: "SAVVY: estimation of AE probabilities"
+title: "Estimation of AE probabilities with savvyr"
 package: savvyr
+bibliography: "../inst/REFERENCES.bib"
 output:
   rmarkdown::html_vignette:
           toc: true
 vignette: |
   %\VignetteEncoding{UTF-8}
-  %\VignetteIndexEntry{SAVVY: estimation of AE probabilities}
+  %\VignetteIndexEntry{Estimation of AE probabilities with savvyr}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options:
   chunk_output_type: console
@@ -24,9 +25,10 @@ library(kableExtra)
 
 
 
-# Estimation of AE probabilities
+# Example with dummy data
 
-We generate the dataset $S1$ in @stegherr_20_sap using the parameter values for Arm A:
+
+We generate the dataset $S1$ in  @stegherr_meta_analytic_2021 using the parameter values for Arm A:
 
 ```{r, include=TRUE, echo=TRUE}
 # sample size
@@ -106,6 +108,9 @@ kable(tab, digits = c(3, 5))
 # References
 
 Rufibach, Kaspar, Regina Stegherr, Claudia Schmoor, Valentine Jehl, Arthur Allignol, Annette Boeckenhoff, Cornelia Dunger-Baldauf, et al. 2022. “Survival analysis for AdVerse events with VarYing follow-up times (SAVVY) – comparison of adverse event risks in randomized controlled trials.” Statistics in Biopharmaceutical Research, Accepted.
-Stegherr, Regina, Jan Beyersmann, Valentine Jehl, Kaspar Rufibach, Friedhelm Leverkus, Claudia Schmoor, and Tim Friede. 2021. “Survival Analysis for AdVerse Events with VarYing Follow-up Times (SAVVY): Rationale and Statistical Concept of a Meta-Analytic Study.” Biometrical Journal 63 (March): 650–70.
-Stegherr, R., C. Schmoor, J. Beyersmann, K. Rufibach, V. Jehl, A. Brückner, L. Eisele, et al. 2021. “Survival analysis for AdVerse events with VarYing follow-up times (SAVVY)-estimation of adverse event risks.” Trials 22 (1): 420.
-Stegherr, R., C. Schmoor, M. Lübbert, T. Friede, and J. Beyersmann. 2021. “Estimating and comparing adverse event probabilities in the presence of varying follow-up times and competing events.” Pharmaceutical Statistics 20 (6): 1125–46
+
+
+
+
+
+
