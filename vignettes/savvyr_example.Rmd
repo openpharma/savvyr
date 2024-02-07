@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 library(savvyr)
+library(kableExtra)
 ```
 
 
