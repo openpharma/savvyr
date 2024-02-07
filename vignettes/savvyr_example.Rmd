@@ -25,8 +25,7 @@ library(kableExtra)
 
 
 
-# Example with dummy data
-
+# Example using dummy data
 
 We generate the dataset $S1$ in  @stegherr_meta_analytic_2021 using the parameter values for Arm A:
 
@@ -60,7 +59,7 @@ The structure of the dataset looks as follows:
 kable(head(dat1, 10), align = c("crcr"))
 ```
 
-For this dataset we then compute all the estimators that enter the comparison in our papers:
+For this dataset we then compute all the estimators used in the comparisons in @stegherr_survival_2021 and @stegherr_estimating_2021:
 
 ```{r, include=TRUE, echo=TRUE}
 # compute each estimator
@@ -105,9 +104,8 @@ rownames(tab) <- c(
 kable(tab, digits = c(3, 5))
 ```
 
-# References
 
-Rufibach, Kaspar, Regina Stegherr, Claudia Schmoor, Valentine Jehl, Arthur Allignol, Annette Boeckenhoff, Cornelia Dunger-Baldauf, et al. 2022. “Survival analysis for AdVerse events with VarYing follow-up times (SAVVY) – comparison of adverse event risks in randomized controlled trials.” Statistics in Biopharmaceutical Research, Accepted.
+# References
 
 
 

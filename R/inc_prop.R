@@ -37,7 +37,7 @@ inc_prop <- function(data,
   assert_true(tau > 0)
 
   n <- nrow(data)
-  ae <- nrow(data["type_of_event" == 1 & "time_to_event" <= tau]) / n
+  ae <- sum(data$type_of_event == 1 & data$time_to_event <= tau) / n
   ae_prob_var <- ae * (1 - ae) / n
 
   c("ae_prob" = ae, "ae_prob_var" = ae_prob_var)
