@@ -17,14 +17,10 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+library(savvyr)
 ```
 
 
-```{r, include=TRUE, echo=TRUE}
-# packages
-packs <- c("data.table", "etm", "survival", "mvna", "knitr", "kableExtra")    
-for (i in 1:length(packs)){library(packs[i], character.only = TRUE)}
-```
 
 # Estimation of AE probabilities
 
