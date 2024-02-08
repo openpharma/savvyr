@@ -28,7 +28,8 @@ library(kableExtra)
 # Example using dummy data
 
 We generate the dataset $S1$ in  @stegherr_meta_analytic_2021 using the parameter
-values for Arm A:
+values for Arm A.  
+First we define sample size and range of censoring times. Then we set the hazard of the three event types (adverse event, death/hard competing event and soft competing event). After the dataset has been generated we set $\tau$ as the maximum event time.
 
 ```{r, include=TRUE, echo=TRUE}
 # sample size
@@ -43,12 +44,9 @@ haz_ae <- 0.00265
 haz_death <- 0.00151
 haz_soft <- 0.00227
 
-
-
 # generate dataset
 set.seed(2020)
 dat1 <- generate_data(n, cens = c(min_cens, max_cens), haz_ae, haz_death, haz_soft)
-
 
 # compute tau
 tau <- max(dat1[, "time_to_event"])
@@ -61,23 +59,25 @@ kable(head(dat1, 10), align = c("crcr"))
 ```
 
 For this dataset we then compute all the estimators used in the comparisons 
-in @stegherr_survival_2021 and @stegherr_estimating_2021:
+in @stegherr_survival_2021 and @stegherr_estimating_2021.  
+We start with the estimators that do not account for competing events (incidence proportion, incidence density, 1- Kaplan Meier), then incidence proportion accounting for competing events and Aalen-Johansen (both first with death only as hard competing event, then using all competing events):
 
 ```{r, include=TRUE, echo=TRUE}
-# compute each estimator
+
 ip <- inc_prop(dat1, tau)
 id <- prop_trans_inc_dens(dat1, tau)
 km <- one_minus_kaplan_meier(dat1, tau)
 
-# competing event "death only"
 idce_2 <- prop_trans_inc_dens_ce(dat1, ce = 2, tau)
 aj_2 <- aalen_johansen(dat1, ce = 2, tau)
 
-# account for all competing events
 idce_3 <- prop_trans_inc_dens_ce(dat1, ce = 3, tau)
 aj_3 <- aalen_johansen(dat1, ce = 3, tau)
+```
 
-# display
+The AE risks look as follows:
+
+```{r, include=TRUE, echo=TRUE}
 tab <- rbind(ip, id, km, idce_2, aj_2[1:2], idce_3, aj_3[1:2])
 colnames(tab) <- c(
   "estimated AE probability",
@@ -91,7 +91,6 @@ rownames(tab) <- c(
   "Aalen-Johansen (all CEs), AE risk"
 )
 
-# probability of AE
 kable(tab, digits = c(3, 5))
 ```
 
@@ -99,7 +98,7 @@ Finally, the estimated probabilities of competing events based on the
 Aalen-Johansen estimators:
 
 ```{r, include=TRUE, echo=TRUE}
-# display
+
 tab <- rbind(aj_2[3:4], aj_3[3:4])
 colnames(tab) <- c("estimated probability",
                    "variance of estimation"
@@ -109,7 +108,6 @@ rownames(tab) <- c(
   "Aalen-Johansen (all CEs), CE risk"
 )
 
-# probability of AE
 kable(tab, digits = c(3, 5))
 ```
 
