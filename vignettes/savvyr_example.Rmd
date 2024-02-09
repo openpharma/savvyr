@@ -32,23 +32,19 @@ values for Arm A.
 First we define sample size and range of censoring times. Then we set the hazard of the three event types (adverse event, death/hard competing event and soft competing event). After the dataset has been generated we set $\tau$ as the maximum event time.
 
 ```{r, include=TRUE, echo=TRUE}
-# sample size
+
 n <- 200
 
-# support of uniform censoring distribution
 min_cens <- 0
 max_cens <- 1000
 
-# hazards for the three event types
 haz_ae <- 0.00265
 haz_death <- 0.00151
 haz_soft <- 0.00227
 
-# generate dataset
 set.seed(2020)
 dat1 <- generate_data(n, cens = c(min_cens, max_cens), haz_ae, haz_death, haz_soft)
 
-# compute tau
 tau <- max(dat1[, "time_to_event"])
 ```
 
