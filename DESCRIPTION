@@ -30,7 +30,9 @@ Imports:
     etm,
     Rdpack
 Suggests:
+    kableExtra,
     knitr,
+    rmarkdown,
     testthat (>= 2.0),
     roxytypes,
     roxylint
