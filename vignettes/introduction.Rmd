@@ -1,5 +1,5 @@
 ---
-title: "Estimation of AE probabilities with savvyr"
+title: "Introduction to `savvyr`"
 package: savvyr
 bibliography: "../inst/REFERENCES.bib"
 output:
@@ -7,7 +7,7 @@ output:
           toc: true
 vignette: |
   %\VignetteEncoding{UTF-8}
-  %\VignetteIndexEntry{Estimation of AE probabilities with savvyr}
+  %\VignetteIndexEntry{Introduction to `savvyr`}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options:
   chunk_output_type: console
@@ -22,8 +22,7 @@ library(savvyr)
 library(kableExtra)
 ```
 
-
-
+In this vignette we give an introduction how to use `savvyr` to estimate adverse event probabilities using the SAVVY framework.
 
 # Example using dummy data
 
