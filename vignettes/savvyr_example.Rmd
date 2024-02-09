@@ -22,11 +22,17 @@ library(savvyr)
 library(kableExtra)
 ```
 
+
+
+
 # Example using dummy data
 
 We generate the dataset $S1$ in @stegherr_meta_analytic_2021 using the parameter
 values for Arm A.  
-First we define sample size and range of censoring times. Then we set the hazard of the three event types (adverse event, death/hard competing event and soft competing event). After the dataset has been generated we set $\tau$ as the maximum event time.
+First we define sample size and range of censoring times. Then we set the hazard
+of the three event types (adverse event, death/hard competing event and soft
+competing event). After the dataset has been generated we set $\tau$ as the
+maximum event time.
 
 ```{r, include=TRUE, echo=TRUE}
 n <- 200
@@ -52,7 +58,10 @@ kable(head(dat1, 10), align = c("crcr"))
 
 For this dataset we then compute all the estimators used in the comparisons 
 in @stegherr_survival_2021 and @stegherr_estimating_2021.  
-We start with the estimators that do not account for competing events (incidence proportion, incidence density, Inverse Kaplan Meier), then incidence proportion accounting for competing events and Aalen-Johansen (both first with death only as hard competing event, then using all competing events):
+We start with the estimators that do not account for competing events (incidence
+proportion, incidence density, Inverse Kaplan Meier), then incidence proportion 
+accounting for competing events and Aalen-Johansen (both first with death only
+as hard competing event, then using all competing events):
 
 ```{r, include=TRUE, echo=TRUE}
 ip <- inc_prop(dat1, tau)
