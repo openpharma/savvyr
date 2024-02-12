@@ -3,7 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   savvyr_example: savvyr_example.html
-last_built: 2024-02-09T13:59Z
+last_built: 2024-02-12T14:39Z
 urls:
   reference: https://openpharma.github.io/savvyr/reference
   article: https://openpharma.github.io/savvyr/articles
