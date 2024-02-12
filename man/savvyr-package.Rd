@@ -6,6 +6,8 @@
 \alias{savvyr-package}
 \title{savvyr: Survival Analysis for AdVerse Events with VarYing Follow-Up Times in R}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 The SAVVY project is a consortium of academic and pharmaceutical industry partners that aims to improve the analyses of adverse event (AE) data in clinical trials through the use of survival techniques appropriately dealing with varying follow-up times and competing events. Although statistical methodologies have advanced, in AE analyses often the incidence proportion, the incidence density or a non-parametric Kaplan-Meier estimator are used, which either ignore censoring or competing events. This package contains functions to easily conduct the proposed improved AE analyses.
 }
 \seealso{
@@ -29,7 +31,7 @@ Authors:
 Other contributors:
 \itemize{
   \item F. Hoffmann-La Roche AG [copyright holder, funder]
-  \item Universität Ulm [copyright holder, funder]
+  \item Universit<U+00E4>t Ulm [copyright holder, funder]
 }
 
 }
