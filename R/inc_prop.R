@@ -29,10 +29,7 @@
 #'
 inc_prop <- function(data,
                      tau) {
-  assert_data_frame(data, any.missing = FALSE, min.rows = 1, min.cols = 2)
-  assert_numeric(data$time_to_event, lower = 0, finite = TRUE)
-  assert_integerish(data$type_of_event, any.missing = FALSE)
-  assert_subset(data$type_of_event, c(0, 1, 2, 3))
+  assert_ae_data(data)
   assert_number(tau, finite = TRUE)
   assert_true(tau > 0)
 
