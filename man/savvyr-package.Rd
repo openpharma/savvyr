@@ -31,7 +31,7 @@ Authors:
 Other contributors:
 \itemize{
   \item F. Hoffmann-La Roche AG [copyright holder, funder]
-  \item Universit<U+00E4>t Ulm [copyright holder, funder]
+  \item Universität Ulm [copyright holder, funder]
 }
 
 }
