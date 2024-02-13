@@ -1,13 +1,11 @@
 # savvyr 0.1.0
 
-### New features
+- First CRAN version of the package.
+- The package provides functions to easily conduct the improved AE analyses proposed by the SAVVY framework.
 
-* Add an initializer script.
+### New Features
 
-### Enhancements
-
-* Documentation on how to use the initialize a package.
-
-### Bug fixes
-
-* None.
+- Estimators that do not account for competing events (incidence proportion, incidence density, Inverse Kaplan Meier)
+- Estimators accounting for competing events (incidence proportion
+  accounting for competing events and Aalen-Johansen, both first with death only
+  as hard competing event, or using all competing events)

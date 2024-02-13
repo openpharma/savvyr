@@ -19,3 +19,4 @@ workflows.md
 images
 ^README\.Rmd$
 ^data-raw$
+^node_modules$

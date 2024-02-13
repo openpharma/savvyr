@@ -97,5 +97,6 @@ repos:
       - id: markdownlint
         exclude: >
           (?x)^(
-          README.md
+          README.md|
+          NEWS.md
           )$

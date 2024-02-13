@@ -27,10 +27,11 @@ In this vignette we give an introduction how to use `savvyr` to estimate adverse
 # Example using dummy data
 
 We generate the dataset $S1$ in @stegherr_meta_analytic_2021 using the parameter
-values for Arm A.  
-First we define sample size and range of censoring times. Then we set the hazard
+values for Arm A.
+First we define the sample size and a range of censoring times.
+Then we set the hazard
 of the three event types (adverse event, death/hard competing event and soft
-competing event). After the dataset has been generated we set $\tau$ as the
+competing event). After the dataset has been generated, we set $\tau$ as the
 maximum event time.
 
 ```{r, include=TRUE, echo=TRUE}
@@ -39,12 +40,14 @@ n <- 200
 min_cens <- 0
 max_cens <- 1000
 
-haz_ae <- 0.00265
-haz_death <- 0.00151
-haz_soft <- 0.00227
-
 set.seed(2020)
-dat1 <- generate_data(n, cens = c(min_cens, max_cens), haz_ae, haz_death, haz_soft)
+dat1 <- generate_data(
+  n,
+  cens = c(min_cens, max_cens),
+  haz_ae = 0.00265,
+  haz_death = 0.00151,
+  haz_soft = 0.00227
+)
 
 tau <- max(dat1[, "time_to_event"])
 ```
@@ -55,10 +58,10 @@ The structure of the dataset looks as follows:
 kable(head(dat1, 10), align = c("crcr"))
 ```
 
-For this dataset we then compute all the estimators used in the comparisons 
-in @stegherr_survival_2021 and @stegherr_estimating_2021.  
+For this dataset we then compute all the estimators used in the comparisons
+in @stegherr_survival_2021 and @stegherr_estimating_2021.
 We start with the estimators that do not account for competing events (incidence
-proportion, incidence density, Inverse Kaplan Meier), then incidence proportion 
+proportion, incidence density, Inverse Kaplan Meier), then incidence proportion
 accounting for competing events and Aalen-Johansen (both first with death only
 as hard competing event, then using all competing events):
 
