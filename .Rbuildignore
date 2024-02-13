@@ -18,3 +18,4 @@ init.sh
 workflows.md
 images
 ^README\.Rmd$
+^data-raw$
