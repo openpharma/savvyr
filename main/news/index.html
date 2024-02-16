@@ -24,18 +24,12 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/savvyr_example.html">Estimation of AE probabilities with savvyr</a>
+    <a class="dropdown-item" href="../articles/introduction.html">Introduction to `savvyr`</a>
   </div>
 </li>
 <li class="active nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://openpharma.github.io/savvyr/main">main</a> </div></li>
-<!-- end dropdown for versions -->
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
@@ -58,17 +52,12 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.0" id="savvyr-010">savvyr 0.1.0<a class="anchor" aria-label="anchor" href="#savvyr-010"></a></h2>
-<div class="section level4">
-<h4 id="new-features-0-1-0">New features<a class="anchor" aria-label="anchor" href="#new-features-0-1-0"></a></h4>
-<ul><li>Add an initializer script.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="enhancements-0-1-0">Enhancements<a class="anchor" aria-label="anchor" href="#enhancements-0-1-0"></a></h4>
-<ul><li>Documentation on how to use the initialize a package.</li>
-</ul></div>
-<div class="section level4">
-<h4 id="bug-fixes-0-1-0">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-0-1-0"></a></h4>
-<ul><li>None.</li>
+<ul><li>First CRAN version of the package.</li>
+<li>The package provides functions to easily conduct the improved AE analyses proposed by the SAVVY framework.</li>
+</ul><div class="section level4">
+<h4 id="new-features-0-1-0">New Features<a class="anchor" aria-label="anchor" href="#new-features-0-1-0"></a></h4>
+<ul><li>Estimators that do not account for competing events (incidence proportion, incidence density, Inverse Kaplan Meier).</li>
+<li>Estimators accounting for competing events (incidence proportion accounting for competing events and Aalen-Johansen, both first with death only as hard competing event, or using all competing events).</li>
 </ul></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -76,7 +65,7 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p><p>Developed by Thomas Kuenzel, Kaspar Rufibach, Regina Stegherr, Daniel Sabanes Bove, F. Hoffmann-La Roche AG, Universität Ulm.</p>
+  <p></p><p>Developed by Thomas Kuenzel, Kaspar Rufibach, Regina Stegherr, Daniel Sabanés Bové, F. Hoffmann-La Roche AG, Universität Ulm.</p>
 </div>
 
 <div class="pkgdown-footer-right">
