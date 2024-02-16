@@ -2,7 +2,7 @@ Type: Package
 Package: savvyr
 Title: Survival Analysis for AdVerse Events with VarYing Follow-Up Times in R
 Version: 0.1.0
-Date: 2023-06-06
+Date: 2024-02-16
 Authors@R: c(
     person("Thomas", "Kuenzel", email = "thomas.kuenzel@roche.com", role = c("aut", "cre")),
     person("Kaspar", "Rufibach", email = "kaspar.rufibach@roche.com", role = "aut"),
