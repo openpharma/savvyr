@@ -7,17 +7,17 @@ Authors@R: c(
     person("Thomas", "Kuenzel", email = "thomas.kuenzel@roche.com", role = c("aut", "cre")),
     person("Kaspar", "Rufibach", email = "kaspar.rufibach@roche.com", role = "aut"),
     person("Regina", "Stegherr", email = "regina.stegherr@uni-ulm.de", role = "aut"),
-    person("Daniel", "Sabanes Bove", email = "daniel.sabanes_bove@roche.com", role = "aut"),
+    person("Daniel", "Sabanés Bové", email = "daniel.sabanes_bove@roche.com", role = "aut"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd")),
     person("Universität Ulm", role = c("cph", "fnd"))
     )
 Description: The SAVVY project is a consortium of academic and pharmaceutical
     industry partners that aims to improve the analyses of adverse event (AE)
     data in clinical trials through the use of survival techniques appropriately
-    dealing with varying follow-up times and competing events, see 
-    Stegherr, Schmoor, Beyersmann, et al. (2021) <doi:10.1186/s13063-021-05354-x>. 
-    Although statistical methodologies have advanced, 
-    in AE analyses often the incidence proportion, the incidence density or a 
+    dealing with varying follow-up times and competing events, see
+    Stegherr, Schmoor, Beyersmann, et al. (2021) <doi:10.1186/s13063-021-05354-x>.
+    Although statistical methodologies have advanced,
+    in AE analyses often the incidence proportion, the incidence density or a
     non-parametric Kaplan-Meier estimator are used, which either ignore censoring or
     competing events. This package contains functions to easily conduct the
     proposed improved AE analyses.
@@ -25,7 +25,7 @@ License: Apache License 2.0
 URL: https://openpharma.github.io/savvyr/
 BugReports: https://github.com/openpharma/savvyr/issues
 Depends:
-    R (>= 3.6)
+    R (>= 4.0)
 Imports:
     checkmate,
     etm,
@@ -34,15 +34,10 @@ Suggests:
     kableExtra,
     knitr,
     rmarkdown,
-    testthat (>= 2.0),
-    roxytypes,
-    roxylint
-Remotes:
-    openpharma/roxytypes,
-    openpharma/roxylint,
+    testthat (>= 3.0)
 Config/Needs/documentation:
-    roxytypes,
-    roxylint
+    roxytypes=github::openpharma/roxytypes,
+    roxylint=github::openpharma/roxylint
 RdMacros:
     Rdpack
 VignetteBuilder:
