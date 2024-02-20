@@ -1,8 +1,8 @@
 Type: Package
 Package: savvyr
-Title: Survival Analysis for AdVerse Events with VarYing Follow-Up Times in R
+Title: Survival Analysis for AdVerse Events with VarYing Follow-Up Times
 Version: 0.1.0
-Date: 2024-02-16
+Date: 2024-02-20
 Authors@R: c(
     person("Thomas", "Kuenzel", email = "thomas.kuenzel@roche.com", role = c("aut", "cre")),
     person("Kaspar", "Rufibach", email = "kaspar.rufibach@roche.com", role = "aut"),
@@ -11,7 +11,8 @@ Authors@R: c(
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd")),
     person("Universität Ulm", role = c("cph", "fnd"))
     )
-Description: The SAVVY project is a consortium of academic and pharmaceutical
+Description: The SAVVY (Survival Analysis for AdVerse Events with VarYing Follow-Up Times)
+    project is a consortium of academic and pharmaceutical
     industry partners that aims to improve the analyses of adverse event (AE)
     data in clinical trials through the use of survival techniques appropriately
     dealing with varying follow-up times and competing events, see
