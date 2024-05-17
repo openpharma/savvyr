@@ -46,7 +46,8 @@ generate_data <- function(n,
     any.missing = FALSE,
     len = 2L,
     unique = TRUE,
-    sorted = TRUE)
+    sorted = TRUE
+  )
   assert_number(haz_ae, finite = TRUE)
   assert_number(haz_death, finite = TRUE)
   assert_number(haz_soft, finite = TRUE)
@@ -64,7 +65,8 @@ generate_data <- function(n,
     1:3,
     size = n,
     prob = haz / haz_all,
-    replace = TRUE)
+    replace = TRUE
+  )
 
   result$cens <- stats::runif(n = n, min = cens[1L], max = cens[2L])
   result$type_of_event <- ifelse(
