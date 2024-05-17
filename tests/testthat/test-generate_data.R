@@ -25,5 +25,4 @@ test_that("show bug in v1 of generate_data", {
   result <- inc_prop(data = df, tau = 4)
   expected <- c(ae_prob = 0.2)
   expect_equal(result["ae_prob"], expected, tolerance = 0.1)
-
 })
