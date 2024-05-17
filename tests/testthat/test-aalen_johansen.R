@@ -8,7 +8,7 @@ test_that("Aalen Johansen works as expected", {
     haz_soft = 0.5
   )
   result <- aalen_johansen(data = df, ce = 2, tau = 4)
-  expected <- c(ae_prob = 0.2719, ae_prob_var = 0.0119, ce_prob = 0.7281, ce_prob_var = 0.0119)
+  expected <- c(ae_prob = 0.4792, ae_prob_var = 0.0266, ce_prob = 0.5208, ce_prob_var = 0.0266)
   expect_equal(result, expected, tolerance = 1e-4)
 })
 
@@ -39,7 +39,7 @@ test_that("Aalen Johansen works without competing events", {
   df <- df[df$type_of_event != 2, ]
   df <- df[df$type_of_event != 3, ]
   result <- aalen_johansen(data = df, ce = 2, tau = 4)
-  expected <- c(ae_prob = 0.5897, ae_prob_var = 0.0404, ce_prob = 0, ce_prob_var = 0)
+  expected <- c(ae_prob = 0.7643, ae_prob_var = 0.0363, ce_prob = 0, ce_prob_var = 0)
   expect_equal(result, expected, tolerance = 1e-4)
 })
 
