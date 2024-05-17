@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="1" branch-rate="0" lines-covered="155" lines-valid="155" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-02-20 09:46:15.473102">
+<coverage line-rate="1" branch-rate="0" lines-covered="155" lines-valid="155" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-05-17 08:53:34.696692">
   <sources>
     <source>/__w/savvyr/savvyr/savvyr</source>
   </sources>
@@ -301,6 +301,36 @@
             <line number="58" hits="2" branch="false"/>
           </lines>
         </class>
+        <class name="prop_trans_inc_dens.R" filename="R/prop_trans_inc_dens.R" line-rate="1" branch-rate="0" complexity="0">
+          <methods>
+            <method name="prop_trans_inc_dens" signature="" line-rate="1" branch-rate="0" complexity="0">
+              <lines>
+                <line number="25" hits="1" branch="false"/>
+                <line number="26" hits="1" branch="false"/>
+                <line number="27" hits="1" branch="false"/>
+                <line number="29" hits="1" branch="false"/>
+                <line number="30" hits="1" branch="false"/>
+                <line number="31" hits="1" branch="false"/>
+                <line number="32" hits="1" branch="false"/>
+                <line number="33" hits="1" branch="false"/>
+                <line number="34" hits="1" branch="false"/>
+                <line number="36" hits="1" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="25" hits="1" branch="false"/>
+            <line number="26" hits="1" branch="false"/>
+            <line number="27" hits="1" branch="false"/>
+            <line number="29" hits="1" branch="false"/>
+            <line number="30" hits="1" branch="false"/>
+            <line number="31" hits="1" branch="false"/>
+            <line number="32" hits="1" branch="false"/>
+            <line number="33" hits="1" branch="false"/>
+            <line number="34" hits="1" branch="false"/>
+            <line number="36" hits="1" branch="false"/>
+          </lines>
+        </class>
         <class name="prop_trans_inc_dens_ce.R" filename="R/prop_trans_inc_dens_ce.R" line-rate="1" branch-rate="0" complexity="0">
           <methods>
             <method name="prop_trans_inc_dens_ce" signature="" line-rate="1" branch-rate="0" complexity="0">
@@ -355,36 +385,6 @@
             <line number="64" hits="1" branch="false"/>
             <line number="66" hits="1" branch="false"/>
             <line number="68" hits="1" branch="false"/>
-          </lines>
-        </class>
-        <class name="prop_trans_inc_dens.R" filename="R/prop_trans_inc_dens.R" line-rate="1" branch-rate="0" complexity="0">
-          <methods>
-            <method name="prop_trans_inc_dens" signature="" line-rate="1" branch-rate="0" complexity="0">
-              <lines>
-                <line number="25" hits="1" branch="false"/>
-                <line number="26" hits="1" branch="false"/>
-                <line number="27" hits="1" branch="false"/>
-                <line number="29" hits="1" branch="false"/>
-                <line number="30" hits="1" branch="false"/>
-                <line number="31" hits="1" branch="false"/>
-                <line number="32" hits="1" branch="false"/>
-                <line number="33" hits="1" branch="false"/>
-                <line number="34" hits="1" branch="false"/>
-                <line number="36" hits="1" branch="false"/>
-              </lines>
-            </method>
-          </methods>
-          <lines>
-            <line number="25" hits="1" branch="false"/>
-            <line number="26" hits="1" branch="false"/>
-            <line number="27" hits="1" branch="false"/>
-            <line number="29" hits="1" branch="false"/>
-            <line number="30" hits="1" branch="false"/>
-            <line number="31" hits="1" branch="false"/>
-            <line number="32" hits="1" branch="false"/>
-            <line number="33" hits="1" branch="false"/>
-            <line number="34" hits="1" branch="false"/>
-            <line number="36" hits="1" branch="false"/>
           </lines>
         </class>
       </classes>
