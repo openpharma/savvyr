@@ -13,7 +13,7 @@ test_that("generate_data works as expected", {
   expect_integer(result$type_of_event, lower = 0, upper = 3, any.missing = FALSE)
 })
 
-test_that("show bug in v1 of generate_data", {
+test_that("generate_data correctly ... ", {
   set.seed(123)
   df <- generate_data(
     n = 10^6,
