@@ -8,6 +8,6 @@ test_that("prop_trans_inc_dens works as expected", {
     haz_soft = 1.2
   )
   result <- prop_trans_inc_dens(data = df, tau = 0.1)
-  expected <- c(ae_prob = 0.33325, ae_prob_var = 0.0365)
+  expected <- c(ae_prob = 0.5554, ae_prob_var = 0.0325)
   expect_equal(result, expected, tolerance = 1e-4)
 })

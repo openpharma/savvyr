@@ -8,7 +8,7 @@ test_that("one_minus_kaplan_meier works as expected", {
     haz_soft = 0.5
   )
   result <- one_minus_kaplan_meier(data = df, tau = 4)
-  expected <- c(ae_prob = 0.3771350, ae_prob_var = 0.0260535)
+  expected <- c(ae_prob = 0.5865, ae_prob_var = 0.0394)
   expect_equal(result, expected, tolerance = 1e-4)
 })
 

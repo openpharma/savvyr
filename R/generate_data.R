@@ -39,7 +39,15 @@ generate_data <- function(n,
                           haz_death,
                           haz_soft) {
   assert_count(n, positive = TRUE)
-  assert_numeric(cens, lower = 0, finite = TRUE, any.missing = FALSE, len = 2L, unique = TRUE, sorted = TRUE)
+  assert_numeric(
+    cens,
+    lower = 0,
+    finite = TRUE,
+    any.missing = FALSE,
+    len = 2L,
+    unique = TRUE,
+    sorted = TRUE
+  )
   assert_number(haz_ae, finite = TRUE)
   assert_number(haz_death, finite = TRUE)
   assert_number(haz_soft, finite = TRUE)
@@ -52,11 +60,14 @@ generate_data <- function(n,
   )
   haz_all <- sum(haz)
   result$time_to_event <- stats::rexp(n = n, rate = haz_all)
-  result$type_of_event <- 1L + stats::rbinom(
-    n = n,
-    size = 2,
-    prob = haz / haz_all
+
+  result$type_of_event <- sample(
+    1:3,
+    size = n,
+    prob = haz / haz_all,
+    replace = TRUE
   )
+
   result$cens <- stats::runif(n = n, min = cens[1L], max = cens[2L])
   result$type_of_event <- ifelse(
     result$time_to_event <= result$cens,
