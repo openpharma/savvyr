@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="aalen_johansen" timestamp="2024-06-06T08:01:23Z" hostname="a6981eb1502a" tests="4" skipped="0" failures="0" errors="0" time="0.925">
-    <testcase time="0.804" classname="aalen_johansen" name="Aalen_Johansen_works_as_expected"/>
-    <testcase time="0.0960000000000001" classname="aalen_johansen" name="Aalen_Johansen_works_without_events"/>
-    <testcase time="0.0209999999999999" classname="aalen_johansen" name="Aalen_Johansen_works_without_competing_events"/>
+  <testsuite name="aalen_johansen" timestamp="2024-06-06T09:31:21Z" hostname="3d57c7c3a8fa" tests="4" skipped="0" failures="0" errors="0" time="0.959">
+    <testcase time="0.833" classname="aalen_johansen" name="Aalen_Johansen_works_as_expected"/>
+    <testcase time="0.0999999999999999" classname="aalen_johansen" name="Aalen_Johansen_works_without_events"/>
+    <testcase time="0.022" classname="aalen_johansen" name="Aalen_Johansen_works_without_competing_events"/>
     <testcase time="0.004" classname="aalen_johansen" name="Aalen_Johansen_works_without_any_events"/>
   </testsuite>
-  <testsuite name="assert" timestamp="2024-06-06T08:01:24Z" hostname="a6981eb1502a" tests="6" skipped="0" failures="0" errors="0" time="0.035">
-    <testcase time="0.012" classname="assert" name="assert_ae_data_passes_as_expected"/>
-    <testcase time="0.00100000000000011" classname="assert" name="assert_ae_data_passes_as_expected"/>
-    <testcase time="0.0089999999999999" classname="assert" name="assert_ae_data_fails_as_expected"/>
+  <testsuite name="assert" timestamp="2024-06-06T09:31:22Z" hostname="3d57c7c3a8fa" tests="6" skipped="0" failures="0" errors="0" time="0.037">
+    <testcase time="0.0130000000000001" classname="assert" name="assert_ae_data_passes_as_expected"/>
+    <testcase time="0.00099999999999989" classname="assert" name="assert_ae_data_passes_as_expected"/>
+    <testcase time="0.00900000000000012" classname="assert" name="assert_ae_data_fails_as_expected"/>
     <testcase time="0.004" classname="assert" name="assert_ae_data_fails_as_expected"/>
     <testcase time="0.00499999999999989" classname="assert" name="assert_ae_data_fails_as_expected"/>
-    <testcase time="0.004" classname="assert" name="assert_ae_data_fails_as_expected"/>
+    <testcase time="0.00500000000000012" classname="assert" name="assert_ae_data_fails_as_expected"/>
   </testsuite>
-  <testsuite name="generate_data" timestamp="2024-06-06T08:01:24Z" hostname="a6981eb1502a" tests="5" skipped="0" failures="0" errors="0" time="0.275">
-    <testcase time="0.0150000000000001" classname="generate_data" name="generate_data_works_as_expected"/>
-    <testcase time="0.00099999999999989" classname="generate_data" name="generate_data_works_as_expected"/>
+  <testsuite name="generate_data" timestamp="2024-06-06T09:31:22Z" hostname="3d57c7c3a8fa" tests="5" skipped="0" failures="0" errors="0" time="0.279">
+    <testcase time="0.0149999999999999" classname="generate_data" name="generate_data_works_as_expected"/>
     <testcase time="0.00100000000000011" classname="generate_data" name="generate_data_works_as_expected"/>
     <testcase time="0.00099999999999989" classname="generate_data" name="generate_data_works_as_expected"/>
-    <testcase time="0.257" classname="generate_data" name="generate_data_correctly_..._"/>
+    <testcase time="0.00100000000000011" classname="generate_data" name="generate_data_works_as_expected"/>
+    <testcase time="0.261" classname="generate_data" name="generate_data_correctly_..._"/>
   </testsuite>
-  <testsuite name="inc_prop" timestamp="2024-06-06T08:01:25Z" hostname="a6981eb1502a" tests="1" skipped="0" failures="0" errors="0" time="0.007">
-    <testcase time="0.0069999999999999" classname="inc_prop" name="inc_prop_works_as_expected"/>
+  <testsuite name="inc_prop" timestamp="2024-06-06T09:31:22Z" hostname="3d57c7c3a8fa" tests="1" skipped="0" failures="0" errors="0" time="0.007">
+    <testcase time="0.00700000000000012" classname="inc_prop" name="inc_prop_works_as_expected"/>
   </testsuite>
-  <testsuite name="one_minus_kaplan_meier" timestamp="2024-06-06T08:01:25Z" hostname="a6981eb1502a" tests="2" skipped="0" failures="0" errors="0" time="0.019">
+  <testsuite name="one_minus_kaplan_meier" timestamp="2024-06-06T09:31:22Z" hostname="3d57c7c3a8fa" tests="2" skipped="0" failures="0" errors="0" time="0.02">
     <testcase time="0.016" classname="one_minus_kaplan_meier" name="one_minus_kaplan_meier_works_as_expected"/>
-    <testcase time="0.00300000000000011" classname="one_minus_kaplan_meier" name="one_minus_kaplan_meier_also_works_without_competing_events"/>
+    <testcase time="0.004" classname="one_minus_kaplan_meier" name="one_minus_kaplan_meier_also_works_without_competing_events"/>
   </testsuite>
-  <testsuite name="prop_trans_inc_dens" timestamp="2024-06-06T08:01:25Z" hostname="a6981eb1502a" tests="1" skipped="0" failures="0" errors="0" time="0.005">
+  <testsuite name="prop_trans_inc_dens" timestamp="2024-06-06T09:31:22Z" hostname="3d57c7c3a8fa" tests="1" skipped="0" failures="0" errors="0" time="0.005">
     <testcase time="0.00499999999999989" classname="prop_trans_inc_dens" name="prop_trans_inc_dens_works_as_expected"/>
   </testsuite>
-  <testsuite name="prop_trans_inc_dens_ce" timestamp="2024-06-06T08:01:25Z" hostname="a6981eb1502a" tests="1" skipped="0" failures="0" errors="0" time="0.005">
-    <testcase time="0.00499999999999989" classname="prop_trans_inc_dens_ce" name="prop_trans_inc_dens_ce_works_as_expected"/>
+  <testsuite name="prop_trans_inc_dens_ce" timestamp="2024-06-06T09:31:22Z" hostname="3d57c7c3a8fa" tests="1" skipped="0" failures="0" errors="0" time="0.006">
+    <testcase time="0.00600000000000001" classname="prop_trans_inc_dens_ce" name="prop_trans_inc_dens_ce_works_as_expected"/>
   </testsuite>
 </testsuites>
