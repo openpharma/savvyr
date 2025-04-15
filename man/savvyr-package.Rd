@@ -25,7 +25,7 @@ Authors:
 \itemize{
   \item Kaspar Rufibach \email{kaspar.rufibach@roche.com}
   \item Regina Stegherr \email{regina.stegherr@uni-ulm.de}
-  \item Daniel Sabanés Bové \email{daniel.sabanes_bove@roche.com}
+  \item Daniel Sabanés Bové \email{daniel@rconis.com}
 }
 
 Other contributors:

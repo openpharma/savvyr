@@ -1,3 +1,9 @@
+# savvyr 0.1.2
+
+### Bug Fixes
+
+- Remove Bioconductor dependency from DESCRIPTION file.
+
 # savvyr 0.1.1
 
 ### Bug Fixes
