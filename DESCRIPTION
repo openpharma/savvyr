@@ -1,13 +1,13 @@
 Type: Package
 Package: savvyr
 Title: Survival Analysis for AdVerse Events with VarYing Follow-Up Times
-Version: 0.1.1
-Date: 2024-06-06
+Version: 0.1.2
+Date: 2025-04-15
 Authors@R: c(
     person("Thomas", "Kuenzel", email = "thomas.kuenzel@roche.com", role = c("aut", "cre")),
     person("Kaspar", "Rufibach", email = "kaspar.rufibach@roche.com", role = "aut"),
     person("Regina", "Stegherr", email = "regina.stegherr@uni-ulm.de", role = "aut"),
-    person("Daniel", "Sabanés Bové", email = "daniel.sabanes_bove@roche.com", role = "aut"),
+    person("Daniel", "Sabanés Bové", email = "daniel@rconis.com", role = "aut"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd")),
     person("Universität Ulm", role = c("cph", "fnd"))
     )
@@ -37,14 +37,13 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0)
 Config/Needs/documentation:
-    roxytypes=github::openpharma/roxytypes,
-    roxylint=github::openpharma/roxylint
+    roxytypes,
+    roxylint
 RdMacros:
     Rdpack
 VignetteBuilder:
     knitr
-biocViews:
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
