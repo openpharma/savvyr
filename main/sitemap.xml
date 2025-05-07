@@ -1,48 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://openpharma.github.io/savvyr/404.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/articles/introduction.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/index.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/reference/aalen_johansen.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/reference/assert_ae_data.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/reference/generate_data.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/reference/inc_prop.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/reference/one_minus_kaplan_meier.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/reference/prop_trans_inc_dens.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/reference/prop_trans_inc_dens_ce.html</loc>
-  </url>
-  <url>
-    <loc>https://openpharma.github.io/savvyr/reference/savvyr-package.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://openpharma.github.io/savvyr/404.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/articles/index.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/articles/introduction.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/authors.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/index.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/news/index.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/reference/aalen_johansen.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/reference/assert_ae_data.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/reference/generate_data.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/reference/inc_prop.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/reference/index.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/reference/one_minus_kaplan_meier.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/reference/prop_trans_inc_dens.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/reference/prop_trans_inc_dens_ce.html</loc></url>
+<url><loc>https://openpharma.github.io/savvyr/reference/savvyr-package.html</loc></url>
 </urlset>
+
